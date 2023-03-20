@@ -1,0 +1,62 @@
+const path = require("path");
+const { defineConfig } = require("@vue/cli-service");
+
+/**
+ * @desption 获取文件的绝对路径地址
+ * @param dir 文件地址
+ */
+const resolve = (dir) => {
+  // __dirname用来动态获取当前文件模块所属目录的绝对路径
+  return path.join(__dirname, dir);
+};
+
+/**
+ * @desption 配置sass全局变量
+ * @param ( 用于颜色、变量、 mixin 等 ) ，可以使用 sass-resources-loader去处理这类非js文件
+ */
+const globalSass = (config) => {
+  const oneOfsMap = config.module.rule("scss").oneOfs.store;
+  oneOfsMap.forEach((item) => {
+    item
+      .use("sass-resources-loader")
+      .loader("sass-resources-loader")
+      // 相对路径
+      .options({ resources: "./src/styles/mixin.scss" })
+      .end();
+  });
+};
+
+module.exports = defineConfig({
+  transpileDependencies: true,
+  // 关闭自动lint校验
+  lintOnSave: false,
+  // 打包出口文件
+  // outputDir: 'build',
+  /* chainWebpack 这个库提供了一个 webpack 原始配置的上层象，使其可以定义具名的 loader规则和具名插件，可以通过其提供的一些方法链式调用*/
+  chainWebpack: (config) => {
+    globalSass(config);
+    //直接修改配置 => 配置别，使用链式调用的方法进行配置
+    config.resolve.alias["@asset"] = resolve("src/assets");
+  },
+
+  /*
+    configureWebpack是调整webpack配置最简单的一种方式，可以新增也可以覆盖cLi中的配置
+    可以是一个对象: 被 webpack-merge 合并到webpack 的设置中去。也可以是一个函数，
+  */
+  // configureWebpack: {
+  //   resolve: {
+  //     // 配置文件访问别名
+  //     alias: {
+  //       "@asset": resolve("src/assets"),
+  //     },
+  //   },
+  // },
+  configureWebpack: (config) => {
+    config.resolve.alias["@asset"] = resolve("src/assets");
+  },
+  devServer: {
+    host: "localhost",
+    port: 9530,
+    open: true, //vue项目启动时自动打开浏览器
+  },
+});
