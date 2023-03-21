@@ -33,7 +33,7 @@
     </div>
   </div>
 </template>
-<script>
+<script lang="ts">
 import userLogin from "./userlogin";
 import codeLogin from "./codelogin";
 import { mapGetters } from "vuex";

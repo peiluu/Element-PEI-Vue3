@@ -21,8 +21,8 @@ const app = createApp(App);
 app.config.globalProperties.$cookies = cookies;
 
 // // 全局导入Icon
-// for (const iconName in ElIcons) {
-//   app.component(iconName, ElIcons[iconName]);
-// }
+for (const iconName in ElIcons) {
+  app.component(iconName, ElIcons[iconName]);
+}
 
 app.use(router).use(store).use(plugins).use(ElementPlus).mount("#app");

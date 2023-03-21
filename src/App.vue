@@ -1,14 +1,20 @@
 <template>
   <div id="app">
-  <el-config-provider :locale="zhCn">
-  <router-view v-slot="{ Component }" class="app-router-view">
-    <transition>
-      <component :is="Component" />
-    </transition>
-  </router-view>
-</el-config-provider>
-</div></template>
+    <!-- <el-config-provider :locale="zhCn">
+      <router-view v-slot="{ Component }" class="app-router-view">
+        <transition>
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </el-config-provider> -->
+    <router-view v-slot="{ Component }" class="app-router-view">
+      <transition>
+        <component :is="Component" />
+      </transition>
+    </router-view>
 
+  </div>
+</template>
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import HelloWorld from './components/HelloWorld.vue';
@@ -18,7 +24,7 @@ import HelloWorld from './components/HelloWorld.vue';
     HelloWorld,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue { }
 </script>
 
 <style>
@@ -28,6 +34,6 @@ export default class App extends Vue {}
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+
 }
 </style>
