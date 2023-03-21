@@ -33,11 +33,11 @@ export const getArrayByKey = (arr, key) => {
 const getMaxMin = (arr, key) => {
   if (!arr.length > 0) return null;
 
-  var max = parseFloat(arr[0][key]);
-  var min = parseFloat(arr[0][key]);
-  var interval;
-  for (var i = 1; i < arr.length; i++) {
-    var cur = parseFloat(arr[i][key]);
+  let max = parseFloat(arr[0][key]);
+  let min = parseFloat(arr[0][key]);
+  let interval;
+  for (let i = 1; i < arr.length; i++) {
+    const cur = parseFloat(arr[i][key]);
     max = cur > max ? cur : max;
     min = cur < min ? cur : min;
   }
@@ -46,7 +46,7 @@ const getMaxMin = (arr, key) => {
 
 const generateCoord = (max, min) => {
   if ((max || max === 0) && (min || min === 0)) {
-    var interval;
+    let interval;
     max = parseInt(max / 5) == max / 5 ? max : (parseInt(max / 5) + 1) * 5;
     min = min >= 0 ? parseInt(min / 5) * 5 : parseInt(min / 5 - 1) * 5;
     interval = (max - min) / 5;
@@ -61,8 +61,8 @@ const generateCoord = (max, min) => {
  * @desption - 根据传入的key，返回最大值最小值和间隔
  */
 export const getMaxMinByKey = (arr, key) => {
-  var maxMin = getMaxMin(arr, key);
-  var max, min;
+  const maxMin = getMaxMin(arr, key);
+  let max, min;
   if (maxMin) {
     max = maxMin[0];
     min = maxMin[1];
@@ -71,9 +71,9 @@ export const getMaxMinByKey = (arr, key) => {
 };
 
 export const getMaxMinByKey2 = (arr, key1, key2) => {
-  var maxMin1 = getMaxMin(arr, key1);
-  var maxMin2 = getMaxMin(arr, key2);
-  var max, min;
+  const maxMin1 = getMaxMin(arr, key1);
+  const maxMin2 = getMaxMin(arr, key2);
+  let max, min;
   if (maxMin1) {
     max = maxMin1[0];
     min = maxMin1[1];
@@ -93,7 +93,7 @@ export const getMaxMinByKey2 = (arr, key1, key2) => {
  */
 export const getQuarterlyList = (number) => {
   const date = new Date();
-  var year = date.getFullYear();
+  const year = date.getFullYear();
   const list = [];
   // 倒推之后的第一年
   const firstYear = year - (number || 2);

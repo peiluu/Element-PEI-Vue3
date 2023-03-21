@@ -11,7 +11,7 @@ const cookies = {};
  */
 cookies.set = function (name = "default", value = "", cookieSetting = {}) {
   // cookie有效时间为1天
-  let currentCookieSetting = {
+  const currentCookieSetting = {
     expires: 1,
   };
 
@@ -54,7 +54,7 @@ cookies.remove = function (name = "default") {
  */
 cookies.removeAll = function () {
   const allCookies = Cookies.get();
-  for (let key in allCookies) {
+  for (const key in allCookies) {
     console.log(key);
     return Cookies.remove(key);
   }

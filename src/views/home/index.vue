@@ -6,7 +6,9 @@
 
 <script setup lang="ts">
 import { reactive, defineProps, ref, defineEmits, onMounted, watch } from "vue";
-let checked = ref(false);
+// import { fa } from "element-plus/es/locale";
+const checked: boolean = ref(false);
+const a: boolean = false
 const cascaderRef = ref();
 const textMap = reactive({
   update: "编辑科目",
@@ -14,10 +16,10 @@ const textMap = reactive({
   addSub: "新增下级科目",
 });
 onMounted(() => {
-  console.log(textMap)
+  console.log(a)
 })
-let dialogFormVisible = ref(false);
-let form = reactive({ status: 1 });
+const dialogFormVisible = ref(false);
+const form = reactive({ status: 1 });
 </script>
 
 <style lang="scss" scoped>

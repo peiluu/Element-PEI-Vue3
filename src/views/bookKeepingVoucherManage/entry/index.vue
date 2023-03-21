@@ -337,9 +337,9 @@ export default {
     // },
     dateValue() {
       const date = new Date();
-      var year = date.getFullYear();
-      var mon = date.getMonth() + 1;
-      var day = date.getDate();
+      const year = date.getFullYear();
+      const mon = date.getMonth() + 1;
+      const day = date.getDate();
       return (
         year +
         "-" +

@@ -10,7 +10,7 @@
  * @param iconfontVersion 字体图标版本
  */
 
-let baseURL = "http://192.168.28.178:8765";
+const baseURL = "http://192.168.28.178:8765";
 const iconfontVersion = ["567566_r22zi6t8noas8aor"];
 const iconfontUrl = `//at.alicdn.com/t/font_$key.css`;
 const codeUrl = `${baseURL}/code`;

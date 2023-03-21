@@ -31,7 +31,7 @@ export const noteTypeList = [
  * @description 原始凭据类型 - MAP格式
  */
 
-let map = {};
+const map = {};
 noteTypeList.forEach((item) => {
   map[item.value] = item.name;
 });

@@ -37,7 +37,7 @@ module.exports = defineConfig({
   /* chainWebpack 这个库提供了一个 webpack 原始配置的上层象，使其可以定义具名的 loader规则和具名插件，可以通过其提供的一些方法链式调用*/
   chainWebpack: (config) => {
     globalSass(config);
-    config.resolve.extensions.add("ts").add("tsx");
+    config.resolve.extensions.add("ts").add("tsx").add('js').add('jsx')
     //直接修改配置 => 配置别，使用链式调用的方法进行配置
     config.resolve.alias["@asset"] = resolve("src/assets");
   },
