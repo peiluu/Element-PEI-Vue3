@@ -5,7 +5,7 @@ import "element-plus/dist/index.css";
 import * as ElIcons from "@element-plus/icons-vue";
 
 // 绝对路径引入
-import "@/permission"; // 权限控制
+// import "@/permission"; // 权限控制
 import "@/styles/index.scss"; // global css
 import router from "@/router";
 import store from "@/store";

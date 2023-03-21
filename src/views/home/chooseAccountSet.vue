@@ -55,13 +55,13 @@ import {
   page,
   updateEnterpriseStatus,
 } from "@/views/businessManage/api/index.js";
-import LgtCardList from "./components/lgt-card-list";
+// import LgtCardList from "./components/lgt-card-list";
 import { delObj, findAccountSet } from "@/views/setManage/api/index.js";
 
 export default {
   name: "chooseAccountSet",
   components: {
-    LgtCardList,
+    // LgtCardList,
   },
   data() {
     return {

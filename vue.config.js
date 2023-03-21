@@ -28,13 +28,16 @@ const globalSass = (config) => {
 
 module.exports = defineConfig({
   transpileDependencies: true,
+  // resolve: { extensions: [".ts", ".tsx", ".js", ".json"] },
   // 关闭自动lint校验
   lintOnSave: false,
+
   // 打包出口文件
   // outputDir: 'build',
   /* chainWebpack 这个库提供了一个 webpack 原始配置的上层象，使其可以定义具名的 loader规则和具名插件，可以通过其提供的一些方法链式调用*/
   chainWebpack: (config) => {
     globalSass(config);
+    config.resolve.extensions.add("ts").add("tsx");
     //直接修改配置 => 配置别，使用链式调用的方法进行配置
     config.resolve.alias["@asset"] = resolve("src/assets");
   },
@@ -45,15 +48,27 @@ module.exports = defineConfig({
   */
   // configureWebpack: {
   //   resolve: {
-  //     // 配置文件访问别名
-  //     alias: {
-  //       "@asset": resolve("src/assets"),
-  //     },
+  //     extensions: [".ts", ".tsx", ".js", ".json"],
   //   },
+  //   // 配置文件访问别名
+  //   // rules: [
+  //   //   {
+  //   //     test: /\.tsx?$/,
+  //   //     loader: "ts-loader",
+  //   //     exclude: /node_modules/,
+  //   //     options: {
+  //   //       appendTsSuffixTo: [/\.vue$/],
+  //   //     },
+  //   //   },
+  //   // ],
+  //   // alias: {
+  //   //   "@asset": resolve("src/assets"),
+  //   // },
   // },
-  configureWebpack: (config) => {
-    config.resolve.alias["@asset"] = resolve("src/assets");
-  },
+
+  // configureWebpack: (config) => {
+  //   config.resolve.alias["@asset"] = resolve("src/assets");
+  // },
   devServer: {
     host: "localhost",
     port: 9530,
