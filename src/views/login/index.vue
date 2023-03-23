@@ -34,14 +34,14 @@
   </div>
 </template>
 <script lang="ts">
-import userLogin from "./userlogin";
-import codeLogin from "./codelogin";
+// import userLogin from "./userlogin";
+// import codeLogin from "./codelogin";
 import { mapGetters } from "vuex";
 export default {
   name: "login",
   components: {
-    userLogin,
-    codeLogin,
+    // userLogin,
+    // codeLogin,
   },
   data() {
     return {

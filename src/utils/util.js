@@ -15,7 +15,7 @@ export const loadStyle = (url) => {
 export const setTitle = function (title) {
   // title = title ? `${title}` : "NxAdmin";
   // window.document.title = title + "-nxAdmin";
-  title = title ? `${title}` : "云税务师记账平台";
+  title = title ? `${title}` : "y自定义组件库";
   window.document.title = title;
 };
 

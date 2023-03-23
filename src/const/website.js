@@ -1,14 +1,14 @@
 export default {
-  title: '云税务师',
+  title: '自定义组件库',
   logo: 'N',
-  author: '罗格数据科技',
+  author: 'pei_lu',
   whiteList: ['/login', '/404', '/401', '/lock'],
   lockPage: '/lock',
   info: {
-    title: '云税务师',
+    title: '自定义组件库',
     list: [
-      '云税务师',
-      '罗格数据科技'
+      '自定义组件库',
+      'pei_lu'
     ]
   },
 }
