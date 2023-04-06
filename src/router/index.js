@@ -42,6 +42,25 @@ export const constantRouterMap = [
       // },
     ],
   },
+   // 首页
+   {
+    path: "/taxclude",
+    component: Layout,
+    meta: { title: "首页", icon: "home" },
+    children: [
+      {
+        path: "home",
+        component: () => import("@/views/home/index"),
+        meta: { title: "首页", icon: "home" },
+      },
+      // {
+      //   path: "/chooseAccountSet",
+      //   component: () => import("@/views/home/chooseAccountSet"),
+      //   meta: { title: "账套选择", icon: "home" },
+      //   hidden: true,
+      // },
+    ],
+  },
   // // 账套管理
   // {
   //   path: "/setManage",

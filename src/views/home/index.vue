@@ -1,151 +1,56 @@
 <template>
-  <div></div>
+  <div>1</div>
+  <card />checked
 </template>
 
-<script lang="ts">
-export default {
-  name: "taxCludeHome",
-  components: {},
-  data() {
-    return {
-      activeQyId: "",
-      dateValue: "",
-      dateValuesText: "",
-      chartList: [
-        {
-          title: "资金趋势图",
-          chartId: "chart1",
-          chartData: []
-        },
-        {
-          title: "营业收入趋势图",
-          chartId: "chart2"
-        }
-      ],
-      dataList: [
-        [
-          {
-            lable: "货币资金",
-            keyWord: "numver"
-          },
-          {
-            lable: "应收账款",
-            keyWord: "numver"
-          }
-        ],
-        [
-          {
-            lable: "应付账款",
-            keyWord: "numver"
-          },
-          {
-            lable: "固定资产",
-            keyWord: "numver"
-          }
-        ],
-        [
-          {
-            lable: "营业收入",
-            keyWord: "numver"
-          },
-          {
-            lable: "应缴税费",
-            keyWord: "numver"
-          }
-        ],
-        [
-          {
-            lable: "利润额",
-            keyWord: "numver"
-          },
-          {
-            lable: "净利润",
-            keyWord: "numver"
-          }
-        ]
-      ]
-    };
+<script setup lang="ts">
+import { reactive, defineProps, ref, defineEmits, watch, onMounted } from "vue";
+import { ElMessage } from "element-plus";
+
+const props: String = defineProps({
+  dialogStatus: {
+    type: String,
+    default: ""
   },
-  computed: {},
-  created() {},
-  watch: {},
-  mounted() {},
+  dialogFormVisible: {
+    type: Boolean,
+    default: false
+  },
+  subjectCate: {
+    type: Number,
+    default: 0
+  },
+  subjectCateList: {
+    type: Array
+  }
+});
+let checked = ref(false);
 
-  methods: {}
-};
+// 监听数据的变化
+watch(checked, val => {
+  console.log(111, val);
+});
+interface dobblueType {
+  a: string
+}
+const dobblue: object = reactive({
+  a: '1'
+});
+console.log(dobblue)
+
+onMounted(() => {
+  ElMessage({
+    message: "欢迎来到首页",
+    type: "success"
+    // duration: 5 * 1000
+  });
+});
 </script>
-
 <style lang="scss" scoped>
-.m-header {
+.item-box {
   display: flex;
-
-  .left {
-    display: flex;
-    flex-basis: 20%;
-    margin-right: 24px;
-
-    .el-icon-circle-plus-outline {
-      font-size: 60px;
-      color: #589df4;
-    }
-
-    /deep/ .el-card__body {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+  .el-select {
+    margin-left: 16px;
   }
-
-  h3 {
-    margin-top: 12px;
-  }
-}
-
-.m-center {
-  margin-top: 24px;
-
-  .center-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-    span:first-child {
-      flex-basis: 43%;
-    }
-
-    .datapick {
-      flex-basis: 51%;
-    }
-  }
-
-  .list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .item {
-    flex-basis: 33%;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-
-    &:not(:last-child) {
-      border-right: 1px solid #ccc;
-    }
-
-    .tit {
-      margin-bottom: 30%;
-    }
-  }
-}
-
-.m-charts {
-  display: flex;
-}
-
-/deep/ .el-icon {
-  cursor: pointer;
 }
 </style>

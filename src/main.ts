@@ -9,6 +9,12 @@ import * as ElIcons from "@element-plus/icons-vue";
 import "@/styles/index.scss"; // global css
 import router from "@/router";
 import store from "@/store";
+
+// 调用自定义组件库
+import ElementPeiVue3 from 'element-pei-vue3';
+import 'element-pei-vue3/componentsdist/css/index.css';
+
+
 // import plugins from "@/plugins";
 
 // import cookies from "@/utils/cookies
@@ -25,4 +31,4 @@ for (const iconName in ElIcons) {
   app.component(iconName, ElIcons[iconName]);
 }
 
-app.use(router).use(store).use(ElementPlus).mount("#app");
+app.use(router).use(store).use(ElementPlus).use(ElementPeiVue3).mount("#app");
