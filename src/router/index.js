@@ -25,7 +25,7 @@ export const constantRouterMap = [
   },
   // 首页
   {
-    path: "/taxclude",
+    path: "/custom",
     component: Layout,
     meta: { title: "首页", icon: "home" },
     children: [
@@ -42,17 +42,61 @@ export const constantRouterMap = [
       // },
     ],
   },
-   // 首页
-   {
-    path: "/taxclude",
+  // 首页
+  {
+    path: "/algorithm",
     component: Layout,
-    meta: { title: "首页", icon: "home" },
+    meta: { title: "算法实践" },
     children: [
       {
-        path: "home",
-        component: () => import("@/views/home/index"),
-        meta: { title: "首页", icon: "home" },
+        path: "algorithm",
+        component: () => import("@/views/algorithm/index"),
+        meta: { title: "算法实践", icon: "algorithm" },
       },
+      // {
+      //   path: "/chooseAccountSet",
+      //   component: () => import("@/views/home/chooseAccountSet"),
+      //   meta: { title: "账套选择", icon: "home" },
+      //   hidden: true,
+      // },
+    ],
+  },
+  {
+    path: "/designPatterns",
+    component: Layout,
+    meta: { title: "设计模式" },
+    children: [
+      {
+        path: "factoryMode",
+        component: () => import("@/views/designPatterns/factoryMode"),
+        meta: { title: "工厂模式" },
+      },
+      {
+        path: "abstractFactoryMode",
+        component: () => import("@/views/designPatterns/abstractFactoryMode"),
+        meta: { title: "抽象工厂模式" },
+      },
+      {
+        path: "builderMode",
+        component: () => import("@/views/designPatterns/builderMode"),
+        meta: { title: "建造者模式" },
+      },
+      {
+        path: "singletonPattern",
+        component: () => import("@/views/designPatterns/singletonPattern"),
+        meta: { title: "单例模式" },
+      },
+      {
+        path: "decoratorMode",
+        component: () => import("@/views/designPatterns/decoratorMode"),
+        meta: { title: "装饰器模式" },
+      },
+      {
+        path: "adapterMode",
+        component: () => import("@/views/designPatterns/adapterMode"),
+        meta: { title: "适配器模式" },
+      },
+
       // {
       //   path: "/chooseAccountSet",
       //   component: () => import("@/views/home/chooseAccountSet"),

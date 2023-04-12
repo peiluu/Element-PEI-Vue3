@@ -13,7 +13,8 @@ import { setTitle } from "@/utils/util";
 // }
 const whiteList = ["/login", "/register"]; // 不重定向白名单
 
-router.beforeEach((to, from, next) => {
+// beforeEach类似于设计模式中的装饰器模式，在router的prototype上添加了前置函数
+routerc.beforeEach((to, from, next) => {
   NProgress.start();
   const token = cookies.get("token");
   if (token) {

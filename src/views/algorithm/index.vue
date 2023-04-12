@@ -1,151 +1,77 @@
 <template>
-  <div></div>
+  <ol>
+    <li>给定一个任意嵌套结构的对象如下，使用你熟悉的算法，将对象的属性按照层级输出到一个数组中.如下：</li>
+    <!-- <li>
+      给定一个任意嵌套结构的对象如下，使用你熟悉的算法，将对象的属性按照层级输出到一个数组中.如下：
+    </li>-->
+  </ol>
 </template>
 
-<script lang="ts">
-export default {
-  name: "taxCludeHome",
-  components: {},
-  data() {
-    return {
-      activeQyId: "",
-      dateValue: "",
-      dateValuesText: "",
-      chartList: [
-        {
-          title: "资金趋势图",
-          chartId: "chart1",
-          chartData: []
-        },
-        {
-          title: "营业收入趋势图",
-          chartId: "chart2"
-        }
-      ],
-      dataList: [
-        [
-          {
-            lable: "货币资金",
-            keyWord: "numver"
-          },
-          {
-            lable: "应收账款",
-            keyWord: "numver"
-          }
-        ],
-        [
-          {
-            lable: "应付账款",
-            keyWord: "numver"
-          },
-          {
-            lable: "固定资产",
-            keyWord: "numver"
-          }
-        ],
-        [
-          {
-            lable: "营业收入",
-            keyWord: "numver"
-          },
-          {
-            lable: "应缴税费",
-            keyWord: "numver"
-          }
-        ],
-        [
-          {
-            lable: "利润额",
-            keyWord: "numver"
-          },
-          {
-            lable: "净利润",
-            keyWord: "numver"
-          }
-        ]
-      ]
-    };
-  },
-  computed: {},
-  created() {},
-  watch: {},
-  mounted() {},
+<script setup lang="ts">
+import {
+  reactive,
+  defineProps,
+  ref,
+  defineEmits,
+  watch,
+  onMounted,
+  watchEffect
+} from "vue";
+import { ElMessage } from "element-plus";
 
-  methods: {}
+const a = {};
+const props: String = defineProps({
+  dialogStatus: {
+    type: String,
+    default: ""
+  },
+  dialogFormVisible: {
+    type: Boolean,
+    default: false
+  },
+  subjectCate: {
+    type: Number,
+    default: 0
+  },
+  subjectCateList: {
+    type: Array
+  }
+});
+onMounted(() => {
+  getResult();
+});
+// 给定一个任意嵌套结构的对象如下，使用你熟悉的算法，将对象的属性按照层级输出到一个数组中
+const getResult = () => {
+  // 输入一个对象
+  const obj = {
+    a: {
+      b: {
+        c: 1,
+        e: 3
+      },
+      d: 2
+    }
+  };
+  const result = [];
+  const fun = (obj, depth) => {
+    for (const key in obj) {
+      result[depth] ? result[depth].push(key) : (result[depth] = [key]);
+      // 循递归
+      if (Object.prototype.toString.call(obj[key]) === "[object Object]") {
+        fun(obj[key], depth + 1);
+      }
+    }
+    return result;
+  };
+  console.log(fun(obj, 0));
+  // 输出一个数组
 };
 </script>
-
 <style lang="scss" scoped>
-.m-header {
+.item-box {
   display: flex;
-
-  .left {
-    display: flex;
-    flex-basis: 20%;
-    margin-right: 24px;
-
-    .el-icon-circle-plus-outline {
-      font-size: 60px;
-      color: #589df4;
-    }
-
-    /deep/ .el-card__body {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+  .el-select {
+    margin-left: 16px;
   }
-
-  h3 {
-    margin-top: 12px;
-  }
-}
-
-.m-center {
-  margin-top: 24px;
-
-  .center-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-    span:first-child {
-      flex-basis: 43%;
-    }
-
-    .datapick {
-      flex-basis: 51%;
-    }
-  }
-
-  .list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .item {
-    flex-basis: 33%;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-
-    &:not(:last-child) {
-      border-right: 1px solid #ccc;
-    }
-
-    .tit {
-      margin-bottom: 30%;
-    }
-  }
-}
-
-.m-charts {
-  display: flex;
-}
-
-/deep/ .el-icon {
-  cursor: pointer;
 }
 </style>

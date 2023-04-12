@@ -1,12 +1,12 @@
 <template>
-  <div>1</div>
-  <card />checked
+  <card />
 </template>
 
 <script setup lang="ts">
-import { reactive, defineProps, ref, defineEmits, watch, onMounted } from "vue";
+import { reactive, defineProps, ref, defineEmits, watch, onMounted, watchEffect } from "vue";
 import { ElMessage } from "element-plus";
 
+const a = {}
 const props: String = defineProps({
   dialogStatus: {
     type: String,
@@ -33,6 +33,9 @@ watch(checked, val => {
 interface dobblueType {
   a: string
 }
+watchEffect(() => {
+  console.log(1)
+})
 const dobblue: object = reactive({
   a: '1'
 });
