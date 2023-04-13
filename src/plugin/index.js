@@ -10,9 +10,9 @@ import global from '@/plugin/global';
  */
 export default {
 	async install(Vue, options) {
-		// console.log('调用插件');	
+		// console.log('调用插件');
 		Vue.use(pluginPermission, options);
-		Vue.use(global, options);
+		// Vue.use(global, options);
 		// Vue.use(mixins);
 	},
 };

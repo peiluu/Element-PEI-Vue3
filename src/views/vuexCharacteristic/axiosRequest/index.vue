@@ -16,7 +16,7 @@ import { getPerson, sendUser } from './api';
 import singleMixins from '@/plugin/mixins/singleMixins';
 
 export default {
-	name: 'home',
+	name: 'axiosRequest',
 	components: {},
 	data() {
 		return {

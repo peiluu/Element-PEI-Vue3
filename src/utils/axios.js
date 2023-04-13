@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
 import config from '@/config/index.js';
-import { Message } from 'element-plus';
+import { ElMessage } from 'element-plus';
 // const querystring = require('querystringify');
 // import store from '../store';
 
@@ -57,7 +57,7 @@ service.interceptors.response.use(
 		if (res.code === 0) return res;
 
 		// code为非0是抛错 可结合自己业务进行修改
-		Message({
+		ElMessage({
 			message: res.message || '系统错误',
 			type: 'error',
 			duration: 5 * 1000,
@@ -87,7 +87,7 @@ service.interceptors.response.use(
 	},
 	error => {
 		console.log('err' + error); // for debug
-		Message({
+		ElMessage({
 			message: error.message,
 			type: 'error',
 			duration: 5 * 1000,

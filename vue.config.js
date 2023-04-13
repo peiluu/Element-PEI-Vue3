@@ -37,7 +37,7 @@ module.exports = defineConfig({
   /* chainWebpack 这个库提供了一个 webpack 原始配置的上层象，使其可以定义具名的 loader规则和具名插件，可以通过其提供的一些方法链式调用*/
   chainWebpack: (config) => {
     globalSass(config);
-    config.resolve.extensions.add("ts").add("tsx").add('js').add('jsx')
+    config.resolve.extensions.add("ts").add("tsx").add("js").add("jsx");
     //直接修改配置 => 配置别，使用链式调用的方法进行配置
     config.resolve.alias["@asset"] = resolve("src/assets");
   },
@@ -71,7 +71,18 @@ module.exports = defineConfig({
   // },
   devServer: {
     host: "localhost",
-    port: 9530,
+    port: 9532,
     open: true, //vue项目启动时自动打开浏览器
+    proxy: {
+      "/api": {
+        // target: 'http://192.168.28.178:8762', //代理地址，这里设置的地址会代替axios中设置的baseURL。将/api前的域名代理为http://localhost:8081
+        target: "http://localhost:9532",
+        pathRewrite: { "/api": "/" }, // 重写/api , 这个 /api 已经在 pathRewrite 被替换掉了，接口就变成404
+      },
+      "/sendUser": {
+        target: "http://localhost:9532",
+        changeOrigin: true, //是否跨域
+      },
+    },
   },
 });

@@ -8,7 +8,11 @@
     "lint": "vue-cli-service lint",
     "build:com": "rimraf componentsdist && npm rebuild node-sass && webpack --config ./webpack.components.js",
     "build:css": "npx gulp sass",
-    "dev": "vue-cli-service serve"
+    "dev": "vue-cli-service serve",
+    "clean": "rimraf node_modules && npm cache clear --force",
+    "docs:dev": "npm rebuild node-sass && vuepress dev docs --temp .temp",
+    "docs:build": "npm rebuild && vuepress build docs",
+    "deploy": "bash deploy.sh"
   },
   "main": "componentsdist/index.umd.js",
   "files": [
@@ -17,7 +21,6 @@
   ],
   "dependencies": {
     "axios": "^1.2.1",
-    "echarts": "^5.4.1",
     "element-pei-vue3": "^0.0.1",
     "element-plus": "^2.2.27",
     "js-cookie": "^3.0.1",
@@ -27,6 +30,8 @@
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0",
+    "vue-server-renderer": "^2.7.9",
+    "vuepress": "^1.9.9",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
