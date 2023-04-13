@@ -2,8 +2,7 @@
 node_modules
 /dist
 /build
-/text
-/docs
+/docs/.vuepress/dist
 # local env files
 .env.local
 .env.*.local
