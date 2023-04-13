@@ -1,19 +1,21 @@
 <template>
-  <H3>装饰器模式 - 能够很好得对已有的功能进行拓展</H3>
-  <H2>
-    <ol>
-      <li>装饰器模式不会改变原有的代码，对其他的业务产生影响，这方便我们在较少的改动下对软件功能进行拓展</li>
-      <li>抽离功能，动态注入</li>
-      <li>axios中的interceptors拦截器就是类似于装饰器模式，前置后置切片函数</li>
-    </ol>
-  </H2>
-  <h4>
-    <el-button @click="onClick">触发数据上报</el-button>
-    <el-button @click="ajax1  ">发送带token的ajax请求</el-button>
-    <el-button @click="getAjax">发送ajax请求</el-button>
+  <div>
+    <h2>装饰器模式 - 能够很好得对已有的功能进行拓展</h2>
+    <h3>
+      <ol>
+        <li>装饰器模式不会改变原有的代码，对其他的业务产生影响，这方便我们在较少的改动下对软件功能进行拓展</li>
+        <li>抽离功能，动态注入</li>
+        <li>应用：axios中的interceptors拦截器就是类似于装饰器模式，前置后置切片函数</li>
+      </ol>
+    </h3>
+    <h3>
+      <el-button @click="onClick">触发数据上报</el-button>
+      <el-button @click="ajax1  ">发送带token的ajax请求</el-button>
+      <el-button @click="getAjax">发送ajax请求</el-button>
 
-    <el-card class="modal">这是一个弹出框</el-card>
-  </h4>
+      <el-card class="modal">这是一个弹出框</el-card>
+    </h3>
+  </div>
 </template>
 
 <script setup lang="ts">

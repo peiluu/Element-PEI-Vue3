@@ -8,9 +8,9 @@
       </router-view>
     </el-config-provider> -->
     <router-view v-slot="{ Component }" class="app-router-view">
-      <transition>
+      <!-- <transition> -->
         <component :is="Component" />
-      </transition>
+      <!-- </transition> -->
     </router-view>
 
   </div>

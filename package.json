@@ -18,9 +18,12 @@
   "dependencies": {
     "axios": "^1.2.1",
     "echarts": "^5.4.1",
+    "element-pei-vue3": "^0.0.1",
     "element-plus": "^2.2.27",
     "js-cookie": "^3.0.1",
     "nprogress": "^0.2.0",
+    "pubsub-js": "^1.9.4",
+    "query-string": "^8.1.0",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0",

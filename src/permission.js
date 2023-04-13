@@ -34,7 +34,7 @@ routerc.beforeEach((to, from, next) => {
 
     // 未退出登录直接进入登录页面，强制回退首页
     if (to.path === "/login") {
-      next({ path: "/taxclude/home" });
+      next({ path: "/custom/home" });
       NProgress.done(); // if current page is dashboard will not trigger	afterEach hook, so manually handle it
     } else {
       next();

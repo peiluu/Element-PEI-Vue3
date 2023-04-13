@@ -8,7 +8,7 @@ export const constantRouterMap = [
   {
     path: "/",
     component: Layout,
-    redirect: "/taxclude/home",
+    redirect: "/custom/home",
     hidden: true,
   },
   {
@@ -49,18 +49,75 @@ export const constantRouterMap = [
     meta: { title: "算法实践" },
     children: [
       {
-        path: "algorithm",
-        component: () => import("@/views/algorithm/index"),
-        meta: { title: "算法实践", icon: "algorithm" },
+        path: "index_20230320",
+        component: () => import("@/views/algorithm/index_20230320"),
+        meta: { title: "算法实践_20230320", icon: "algorithm" },
       },
-      // {
-      //   path: "/chooseAccountSet",
-      //   component: () => import("@/views/home/chooseAccountSet"),
-      //   meta: { title: "账套选择", icon: "home" },
-      //   hidden: true,
-      // },
+      {
+        path: "index_20230321",
+        component: () => import("@/views/algorithm/index_20230321"),
+        meta: { title: "算法实践_20230321", icon: "algorithm" },
+      },
     ],
   },
+  // vue原理
+  {
+    path: "/vuexCharacteristic",
+    component: Layout,
+    meta: { title: "Vue特征" },
+    children: [
+      {
+        path: "dataResponsive",
+        component: () => import("@/views/vuexCharacteristic/dataResponsive"),
+        meta: { title: "数据响应式" },
+      },
+      {
+        path: "defineproperty",
+        component: () => import("@/views/vuexCharacteristic/defineproperty"),
+        meta: { title: "数据代理" },
+      },
+      {
+        path: "vuerouter",
+        component: () => import("@/views/vuexCharacteristic/vuerouter"),
+        meta: { title: "vuerouter" },
+      },
+      {
+        path: "vuex",
+        component: () => import("@/views/vuexCharacteristic/vuex"),
+        meta: { title: "vuex" },
+      },
+      {
+        path: "vuecomponent",
+        component: () => import("@/views/vuexCharacteristic/vuecomponent"),
+        meta: { title: "vuecomponent" },
+      },
+    ],
+  },
+
+  // ES6
+  {
+    path: "/ES6",
+    component: Layout,
+    meta: { title: "ES6学习" },
+    children: [
+      {
+        path: "basic",
+        component: () => import("@/views/ES6"),
+        meta: { title: "ES6 基础" },
+      },
+      {
+        path: "generator",
+        component: () => import("@/views/ES6/generator"),
+        meta: { title: "generator" },
+      },
+      {
+        path: "observer",
+        component: () => import("@/views/ES6/observer"),
+        meta: { title: "observer" },
+      },
+    ],
+  },
+  // 设计模式
   {
     path: "/designPatterns",
     component: Layout,
@@ -95,6 +152,16 @@ export const constantRouterMap = [
         path: "adapterMode",
         component: () => import("@/views/designPatterns/adapterMode"),
         meta: { title: "适配器模式" },
+      },
+      {
+        path: "strategicMode",
+        component: () => import("@/views/designPatterns/strategicMode"),
+        meta: { title: "策略模式" },
+      },
+      {
+        path: "proxyPattern",
+        component: () => import("@/views/designPatterns/proxyPattern"),
+        meta: { title: "代理模式" },
       },
 
       // {

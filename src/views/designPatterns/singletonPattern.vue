@@ -1,19 +1,19 @@
 <template>
-  <H3>单例模式 -</H3>
-  <H2>
-    <ol>
-      <li>保证一个类仅有一个实例，并提供一个访问它的全局访问点</li>
-      <li>主要解决一个全局使用的类频繁得创建和销毁，占用内存</li>
-    </ol>
-  </H2>
-  <h4>
-    <el-button @click="showModal">打开</el-button>
-    <el-card class="modal">这是一个弹出框</el-card>
-  </h4>
+  <div>
+    <h2>单例模式 - 保证一个类仅有一个实例，并提供一个访问它的全局访问点</h2>
+    <h3>
+      <ol>
+        <li>主要解决一个全局使用的类频繁得创建和销毁，占用内存</li>
+      </ol>
+    </h3>
+    <h3>
+      <el-button @click="showModal">打开</el-button>
+      <el-card class="modal">这是一个弹出框</el-card>
+    </h3>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { resolveRef } from "@vueuse/shared";
 import { onMounted } from "vue";
 
 onMounted(() => {
