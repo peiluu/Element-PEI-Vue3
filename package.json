@@ -10,8 +10,8 @@
     "build:css": "npx gulp sass",
     "dev": "vue-cli-service serve",
     "clean": "rimraf node_modules && npm cache clear --force",
-    "docs:dev": "npm rebuild node-sass && vuepress dev docs --temp .temp",
-    "docs:build": "npm rebuild && vuepress build docs",
+    "docs:dev": "vuepress dev docs --temp .temp",
+    "docs:build": "vuepress build docs",
     "deploy": "bash deploy.sh"
   },
   "main": "componentsdist/index.umd.js",
@@ -30,7 +30,6 @@
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0",
-    "vue-server-renderer": "^2.7.9",
     "vuepress": "^1.9.9",
     "vuex": "^4.1.0"
   },
@@ -52,7 +51,7 @@
     "sass-loader": "^13.2.0",
     "sass-resources-loader": "^2.2.5",
     "typescript": "~4.5.5",
-    "vue-loader": "^17.0.1",
+    "vue-loader": "16.5.0",
     "webpack-cli": "^5.0.1"
   },
   "eslintConfig": {

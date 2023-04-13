@@ -162,6 +162,16 @@ export const constantRouterMap = [
         component: () => import("@/views/designPatterns/proxyPattern"),
         meta: { title: "代理模式" },
       },
+      {
+        path: "observerMode",
+        component: () => import("@/views/designPatterns/observerMode"),
+        meta: { title: "观察者模式" },
+      },
+      {
+        path: "bridgingMode",
+        component: () => import("@/views/designPatterns/bridgingMode"),
+        meta: { title: "桥接模式" },
+      },
     ],
   },
 ];
