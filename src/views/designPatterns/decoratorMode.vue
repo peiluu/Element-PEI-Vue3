@@ -12,13 +12,11 @@
       <el-button @click="onClick">触发数据上报</el-button>
       <el-button @click="ajax1  ">发送带token的ajax请求</el-button>
       <el-button @click="getAjax">发送ajax请求</el-button>
-
-      <el-card class="modal">这是一个弹出框</el-card>
     </h3>
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { onMounted } from "vue";
 
 onMounted(() => {});
@@ -79,11 +77,5 @@ const ajax1 = getAjax.before((url, methods, params) => {
   params.token = 1111111;
 });
 ajax1("getData", "post", { name: 1 });
+
 </script>
-<style lang="scss" scoped>
-.modal {
-  margin: 24px;
-  display: none;
-  border: 1px solid #ccc;
-}
-</style>

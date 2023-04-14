@@ -78,7 +78,7 @@ export default {
 				}
 				return temArr
 			}
-			// 计算得出平均数。向下取值	
+			// 计算得出平均数。向下取值
 			let result = [];
 			//取出中间值
 			let middle = Math.ceil(count / 2);
@@ -130,8 +130,6 @@ export default {
 				})
 			}
 			getChildren(treeData)
-
-			console.log(treeData)
 		}
 	},
 

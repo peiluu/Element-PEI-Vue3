@@ -1,16 +1,14 @@
 <template>
-  <div>
+  <h3>
     <h2>单例模式 - 保证一个类仅有一个实例，并提供一个访问它的全局访问点</h2>
-    <h3>
-      <ol>
-        <li>主要解决一个全局使用的类频繁得创建和销毁，占用内存</li>
-      </ol>
-    </h3>
+    <ol>
+      <li>主要解决一个全局使用的类频繁得创建和销毁，占用内存</li>
+    </ol>
     <h3>
       <el-button @click="showModal">打开</el-button>
       <el-card class="modal">这是一个弹出框</el-card>
     </h3>
-  </div>
+  </h3>
 </template>
 
 <script setup lang="ts">

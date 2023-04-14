@@ -43,6 +43,11 @@ export const constantRouterMap = [
     meta: { title: "算法实践" },
     children: [
       {
+        path: "index_20230319",
+        component: () => import("@/views/algorithm/index_20230319"),
+        meta: { title: "算法实践_20230319", icon: "algorithm" },
+      },
+      {
         path: "index_20230320",
         component: () => import("@/views/algorithm/index_20230320"),
         meta: { title: "算法实践_20230320", icon: "algorithm" },
@@ -51,6 +56,11 @@ export const constantRouterMap = [
         path: "index_20230321",
         component: () => import("@/views/algorithm/index_20230321"),
         meta: { title: "算法实践_20230321", icon: "algorithm" },
+      },
+      {
+        path: "index_20230414",
+        component: () => import("@/views/algorithm/index_20230414"),
+        meta: { title: "算法实践_20230414", icon: "algorithm" },
       },
     ],
   },
