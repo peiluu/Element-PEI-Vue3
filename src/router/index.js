@@ -178,6 +178,11 @@ export const constantRouterMap = [
         meta: { title: "观察者模式" },
       },
       {
+        path: "publishSubscriptionMode",
+        component: () => import("@/views/designPatterns/publishSubscriptionMode"),
+        meta: { title: "发布订阅模式" },
+      },
+      {
         path: "bridgingMode",
         component: () => import("@/views/designPatterns/bridgingMode"),
         meta: { title: "桥接模式" },
