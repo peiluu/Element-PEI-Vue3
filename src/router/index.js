@@ -62,6 +62,12 @@ export const constantRouterMap = [
         component: () => import("@/views/algorithm/index_20230414"),
         meta: { title: "算法实践_20230414", icon: "algorithm" },
       },
+      {
+        path: "index_20230418",
+        component: () => import("@/views/algorithm/index_20230418"),
+        meta: { title: "算法实践_20230418", icon: "algorithm" },
+      },
+
     ],
   },
   // vue原理
@@ -126,6 +132,24 @@ export const constantRouterMap = [
       },
     ],
   },
+  // TypeScript
+  {
+    path: "/typeScript",
+    component: Layout,
+    meta: { title: "TypeScript" },
+    children: [
+      {
+        path: "basicType",
+        component: () => import("@/views/typeScript/basicType"),
+        meta: { title: "基础类型" },
+      },
+      {
+        path: "basicType",
+        component: () => import("@/views/typeScript/basicType"),
+        meta: { title: "类型断言" },
+      },
+    ],
+  },
   // 设计模式
   {
     path: "/designPatterns",
@@ -179,7 +203,8 @@ export const constantRouterMap = [
       },
       {
         path: "publishSubscriptionMode",
-        component: () => import("@/views/designPatterns/publishSubscriptionMode"),
+        component: () =>
+          import("@/views/designPatterns/publishSubscriptionMode"),
         meta: { title: "发布订阅模式" },
       },
       {
@@ -187,6 +212,12 @@ export const constantRouterMap = [
         component: () => import("@/views/designPatterns/bridgingMode"),
         meta: { title: "桥接模式" },
       },
+      {
+        path: "v",
+        component: () => import("@/views/designPatterns/iteratorMode"),
+        meta: { title: "迭代器模式" },
+      },
+
     ],
   },
 ];
