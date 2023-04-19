@@ -150,6 +150,25 @@ export const constantRouterMap = [
       },
     ],
   },
+   // Hooks实践
+   {
+    path: "/hooks",
+    component: Layout,
+    meta: { title: "Hooks实践" },
+     children: [
+      {
+        path: "hooks",
+        component: () => import("@/views/hooks/index"),
+        meta: { title: "Hooks钩子" },
+      },
+      {
+        path: "customeHooks",
+        component: () => import("@/views/hooks/customeHooks"),
+        meta: { title: "自定义Hooks" },
+      },
+
+    ],
+  },
   // 设计模式
   {
     path: "/designPatterns",
@@ -213,9 +232,15 @@ export const constantRouterMap = [
         meta: { title: "桥接模式" },
       },
       {
-        path: "v",
+        path: "iteratorMode",
         component: () => import("@/views/designPatterns/iteratorMode"),
         meta: { title: "迭代器模式" },
+      },
+
+      {
+        path: "responsibilityChainMode",
+        component: () => import("@/views/designPatterns/responsibilityChainMode"),
+        meta: { title: "职责链模式" },
       },
 
     ],

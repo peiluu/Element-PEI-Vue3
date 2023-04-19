@@ -240,5 +240,6 @@ export const getSocial1 = async () => {
 		return await service.get('https://api.uixsj.cn/hitokoto/get?type=social');
 	} catch (error) {
 		console.error(error);
-	}
+  }
+
 };

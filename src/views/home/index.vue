@@ -2,11 +2,20 @@
   <card />
 </template>
 
-<script setup lang="ts">
-import { reactive, defineProps, ref, defineEmits, watch, onMounted, watchEffect } from "vue";
+<script setup lang="ts" >
+import {
+  reactive,
+  defineProps,
+  ref,
+  defineEmits,
+  watch,
+  onMounted,
+  watchEffect,
+  useState
+} from "vue";
 import { ElMessage } from "element-plus";
 
-const a = {}
+const a = {};
 const props: String = defineProps({
   dialogStatus: {
     type: String,
@@ -31,15 +40,15 @@ watch(checked, val => {
   console.log(111, val);
 });
 interface dobblueType {
-  a: string
+  a: string;
 }
 watchEffect(() => {
-  console.log(1)
-})
-const dobblue: object = reactive({
-  a: '1'
+  console.log(1);
 });
-console.log(dobblue)
+const dobblue: object = reactive({
+  a: "1"
+});
+console.log(dobblue);
 
 onMounted(() => {
   ElMessage({
