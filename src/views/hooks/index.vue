@@ -1,19 +1,16 @@
 <template>
-  <card />
+  <div>
+    <p>X: {{ x }}</p>
+    <p>Y: {{ y }}</p>
+    <p>copyX: {{ copyX }}</p>
+  </div>
 </template>
 
 <script setup>
-import {
-  reactive,
-  defineProps,
-  ref,
-  defineEmits,
-  watch,
-  onMounted,
-  useState
-} from "vue";
-import { ElMessage } from "element-plus";
+import { defineComponent } from "vue";
+// 引入hooks
+ // setup只会调用一次，如果使用普通的公共函数，而不是自定义hooks, copyX的值将无法实时更新，因为不是响应式数据
 
-onMounted(() => {});
+const { x, y, copyX } = useMousePosition();
+
 </script>
-

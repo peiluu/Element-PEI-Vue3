@@ -67,6 +67,12 @@ export const constantRouterMap = [
         component: () => import("@/views/algorithm/index_20230418"),
         meta: { title: "算法实践_20230418", icon: "algorithm" },
       },
+      {
+        path: "index_20230420",
+        component: () => import("@/views/algorithm/index_20230420"),
+        meta: { title: "算法实践_20230420", icon: "algorithm" },
+      },
+
 
     ],
   },

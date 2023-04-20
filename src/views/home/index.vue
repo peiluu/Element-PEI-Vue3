@@ -1,18 +1,9 @@
 <template>
-  <card />
+  
 </template>
 
-<script setup lang="ts" >
-import {
-  reactive,
-  defineProps,
-  ref,
-  defineEmits,
-  watch,
-  onMounted,
-  watchEffect,
-  useState
-} from "vue";
+<script setup lang="ts">
+import { reactive, defineProps, ref, watch, onMounted, watchEffect } from "vue";
 import { ElMessage } from "element-plus";
 
 const a = {};
