@@ -9,7 +9,7 @@
   </h3>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { onMounted } from "vue";
 
 onMounted(() => {

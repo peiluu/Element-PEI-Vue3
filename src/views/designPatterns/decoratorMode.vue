@@ -77,5 +77,4 @@ const ajax1 = getAjax.before((url, methods, params) => {
   params.token = 1111111;
 });
 ajax1("getData", "post", { name: 1 });
-
 </script>

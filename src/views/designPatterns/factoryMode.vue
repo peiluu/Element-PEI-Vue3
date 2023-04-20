@@ -2,7 +2,7 @@
   <h2>工厂模式 - 由工厂对象决定创建某一种产品对象类的实例。主要用来创建同一类对象</h2>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { onMounted } from "vue";
 
 onMounted(() => {

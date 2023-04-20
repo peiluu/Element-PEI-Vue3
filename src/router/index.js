@@ -182,6 +182,16 @@ export const constantRouterMap = [
     meta: { title: "设计模式" },
     children: [
       {
+        path: "constructorMode",
+        component: () => import("@/views/designPatterns/constructorMode"),
+        meta: { title: "构造器模式" },
+      },
+      {
+        path: "prototypeMode",
+        component: () => import("@/views/designPatterns/prototypeMode"),
+        meta: { title: "原型模式" },
+      },
+      {
         path: "factoryMode",
         component: () => import("@/views/designPatterns/factoryMode"),
         meta: { title: "工厂模式" },
