@@ -45,35 +45,38 @@ export const constantRouterMap = [
       {
         path: "index_20230319",
         component: () => import("@/views/algorithm/index_20230319"),
-        meta: { title: "算法实践_20230319", icon: "algorithm" },
+        meta: { title: "算法实践_20230319" },
       },
       {
         path: "index_20230320",
         component: () => import("@/views/algorithm/index_20230320"),
-        meta: { title: "算法实践_20230320", icon: "algorithm" },
+        meta: { title: "算法实践_20230320" },
       },
       {
         path: "index_20230321",
         component: () => import("@/views/algorithm/index_20230321"),
-        meta: { title: "算法实践_20230321", icon: "algorithm" },
+        meta: { title: "算法实践_20230321" },
       },
       {
         path: "index_20230414",
         component: () => import("@/views/algorithm/index_20230414"),
-        meta: { title: "算法实践_20230414", icon: "algorithm" },
+        meta: { title: "算法实践_20230414" },
       },
       {
         path: "index_20230418",
         component: () => import("@/views/algorithm/index_20230418"),
-        meta: { title: "算法实践_20230418", icon: "algorithm" },
+        meta: { title: "算法实践_20230418" },
       },
       {
         path: "index_20230420",
         component: () => import("@/views/algorithm/index_20230420"),
-        meta: { title: "算法实践_20230420", icon: "algorithm" },
+        meta: { title: "算法实践_20230420" },
       },
-
-
+      {
+        path: "index_20230421",
+        component: () => import("@/views/algorithm/index_20230421"),
+        meta: { title: "算法实践_20230421" },
+      },
     ],
   },
   // vue原理
@@ -156,12 +159,12 @@ export const constantRouterMap = [
       },
     ],
   },
-   // Hooks实践
-   {
+  // Hooks实践
+  {
     path: "/hooks",
     component: Layout,
     meta: { title: "Hooks实践" },
-     children: [
+    children: [
       {
         path: "hooks",
         component: () => import("@/views/hooks/index"),
@@ -172,7 +175,6 @@ export const constantRouterMap = [
         component: () => import("@/views/hooks/customeHooks"),
         meta: { title: "自定义Hooks" },
       },
-
     ],
   },
   // 设计模式
@@ -255,10 +257,10 @@ export const constantRouterMap = [
 
       {
         path: "responsibilityChainMode",
-        component: () => import("@/views/designPatterns/responsibilityChainMode"),
+        component: () =>
+          import("@/views/designPatterns/responsibilityChainMode"),
         meta: { title: "职责链模式" },
       },
-
     ],
   },
 ];

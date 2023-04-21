@@ -4,8 +4,7 @@ export const useMousePosition = () => {
   const x = ref(0);
   const y = ref(0);
   // 模拟普通公共函数中的数据
-  let copyX = 0;
-
+  let copyX = 0;  
   const updateMouse = (e) => {
     x.value = e.pageX;
     y.value = e.pageY;

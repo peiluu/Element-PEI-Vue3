@@ -65,4 +65,8 @@ const abstractFactoryMode = () => {
   console.log(UserClass);
   console.log(new UserClass("lida"));
 };
+
+const getData = () => {
+
+}
 </script>
