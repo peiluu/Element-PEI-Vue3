@@ -12,7 +12,7 @@ import { onMounted } from "vue";
 
 onMounted(() => {
   // getData();
-  // getData1();
+  getData1();
   getData4();
 });
 
@@ -72,8 +72,9 @@ const getData1 = () => {
   let nul: null = null;
 
   let dir: Direction = Direction.NORTH;
-  const fun1 = (num: number): void => {
-    console.log(num);
+  const fun1 = (num: number): never => {
+    // 函数报错的时候，代码会立即结束，永远都不会返回结果
+    throw new Error("报错了");
   };
   console.log(fun(1));
 };
@@ -87,6 +88,7 @@ const getData3 = () => {
   const fun = <T>(arg: T): T => {
     return arg;
   };
+  fun(1);
   const identity1: <T>(arg: T) => T = arg => {
     return arg;
   };
@@ -95,17 +97,45 @@ const getData3 = () => {
     return arg;
   }
 };
+
 const getData4 = () => {
-  class Employee {
-    constructor(user) {
-      this.user = user;
-    }
-    // say和constructor是同等级别的函数
-    say() {
-      console.log(this.user)
-    }
-  }
-  const student = new Employee({ age: 18 });
-  console.log(student)
+  type Message = {
+    num: number;
+  };
+  // error
+  // type Message = {
+  //   str: string;
+  // };
+  // const obj: Message = { num: 1 };
+  type inter = string | number;
+  const str: inter = 1;
+
+  type x = {
+    num?: number;
+  };
+  type y = {
+    str: string;
+  };
+  type cross = x & y;
+  // obj中需要包含X和Y中所有类型的特征
+  const obj: cross = {
+    num: 1,
+    str: "1"
+  };
+  let a = 1 || 2;
+};
+
+const getData5 = () => {
+  // 限制str的值只能在交叉范围中选择
+  let str: "man" | "woman";
+  str = "man";
+  str = "woman";
+  // str = 'none' // error
+};
+
+const getData6 = () => {sr
+  let arr: [number, string];
+  // 数组的第一个元素是number类型，第二个类型是string
+  arr = [1, "2"];
 };
 </script>

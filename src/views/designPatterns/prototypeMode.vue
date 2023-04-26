@@ -76,4 +76,30 @@ const getData = () => {
   lili.say();
   luch.say();
 };
+
+const getData4 = () => {
+  class Employee {
+    constructor(age) {
+      this.age = age;
+    }
+    // say和constructor是同等级别的函数
+    say() {
+      console.log(this.age);
+    }
+  }
+  const student = new Employee(18);
+  const teacher = new Employee();
+
+  class User extends Employee {
+    // 继承了父类的元素
+    constructor(age, sex) {
+      super(age);
+      this.sex = sex;
+    }
+  }
+
+  const Lucy = new User(12, "M");
+  console.log(Lucy);
+  Lucy.say();
+};
 </script>

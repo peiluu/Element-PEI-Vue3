@@ -77,6 +77,12 @@ export const constantRouterMap = [
         component: () => import("@/views/algorithm/index_20230421"),
         meta: { title: "算法实践_20230421" },
       },
+      {
+        path: "index_20230424",
+        component: () => import("@/views/algorithm/index_20230424"),
+        meta: { title: "算法实践_20230424" },
+      },
+
     ],
   },
   // vue原理

@@ -36,7 +36,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-, "src/main.js", "shims-vue.d.ts"  ],
+, "src/main.js", "shims-vue.d.ts", "src/hooks/useMousePosition.js"  ],
   "exclude": [
     "node_modules"
   ]
