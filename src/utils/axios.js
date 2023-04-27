@@ -16,6 +16,7 @@ const service = axios.create({
 });
 
 // request拦截器
+// request拦截器，interceptors应用了设计模式中的装饰器模式，前置了切片函数
 service.interceptors.request.use(
 	config => {
 		config.headers['Content-Type'] = 'application/json; charset=utf-8';

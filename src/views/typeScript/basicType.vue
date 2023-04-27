@@ -125,6 +125,7 @@ const getData4 = () => {
   let a = 1 || 2;
 };
 
+ 
 const getData5 = () => {
   // 限制str的值只能在交叉范围中选择
   let str: "man" | "woman";
