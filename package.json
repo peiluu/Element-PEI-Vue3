@@ -1,7 +1,7 @@
 {
   "name": "element-pei-vue3",
   "version": "0.0.1",
-  "description": "Vue自定义组件库",
+  "description": "自定义demo",
   "author": "pei_lu",
   "scripts": {
     "build": "vue-cli-service build",
@@ -76,7 +76,7 @@
     "not ie 11"
   ],
   "keywords": [
-    "Vue自定义组件库",
+    "Vue自定义demo",
     "vue",
     "vue3",
     "ui"

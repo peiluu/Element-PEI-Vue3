@@ -1,5 +1,4 @@
 <template>
-
   <el-scrollbar wrapClass="scrollbar-wrapper">
     <logo :isCollapse="isCollapse"></logo>
     <el-menu
@@ -7,8 +6,8 @@
       :show-timeout="200"
       :default-active="$route.path"
       :collapse="isCollapse"
-      background-color="#6959CD"
-      text-color="white"
+      background-color="fafafa"
+      text-color="333"
       active-text-color="#21BAA9"
     >
       <sidebar-item :routes="permission_routers"></sidebar-item>

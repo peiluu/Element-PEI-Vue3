@@ -1,4 +1,4 @@
-import website from '@/const/website'
+import website from '@/config/website'
 const common = {
 
   state: {
