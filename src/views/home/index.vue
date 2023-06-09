@@ -1,23 +1,6 @@
 <template>
   <div class="main-content">
-    <div>
-      <el-button type="primary" @click="changeLocale('zh')">切换为中文</el-button>
-      <el-button type="primary" @click="changeLocale('zh')">切换为中文</el-button>
-      <el-button @click="changeLocale('en')">切换为英文</el-button>
-    </div>
-
-    <ul>
-      <li>{{ $t("navigateBar.hotspot") }}</li>
-      <li>{{ $t("navigateBar.experience") }}</li>
-      <li>{{ $t("navigateBar.focus") }}</li>
-      <li>{{ $t("navigateBar.recommend") }}</li>
-    </ul>
-    <ol>
-      <li>{{ $t("tabs.work") }}</li>
-      <li>{{ $t("tabs.private") }}</li>
-      <li>{{ $t("tabs.collect") }}</li>
-      <li>{{ $t("tabs.like") }}</li>
-    </ol>
+    这个一个首页
   </div>
 </template>
 
@@ -36,3 +19,15 @@ const a = () => {
 
 }
 </script>
+<<<<<<< HEAD
+=======
+<style lang="scss" scoped>
+.item-box {
+  display: flex;
+
+  .el-select {
+    margin-left: 16px;
+  }
+}
+</style>
+>>>>>>> c467417 (feat: 调整目录结构)
