@@ -2,19 +2,8 @@
 <template>
   <el-menu class="c-navbar" mode="horizontal">
     <div class="m-left">
-      <Lgt-hamburger
-        class="hamburger-container"
-        :toggleClick="toggleSideBar"
-        :isActive="sidebar.opened"
-      />
-      <div class="m-list">
-        <div>
-          当前主体
-          <span class="txt">{{ userInfo?.qymc }}</span>
-          <span class="txt">{{ userInfo?.accountSetName }}</span>
-          <span class="btn" @click="goGochooseAccountSet">切换</span>
-        </div>
-      </div>
+      <lgt-hamburger class="hamburger-container" :toggleClick="toggleSideBar" :isActive="sidebar.opened" />
+      <lgt-breadcrumb />
     </div>
 
     <div class="m-right">
@@ -30,6 +19,8 @@
 <script>
 import { mapGetters } from "vuex";
 import LgtHamburger from "@/components/lgt-hamburger";
+import LgtBreadcrumb from "@/components/lgt-breadcrumb";
+
 import cookies from "@/utils/cookies";
 import { ElMessageBox } from "element-plus";
 
@@ -39,13 +30,14 @@ export default {
   name: "navBar",
   components: {
     LgtHamburger,
+    LgtBreadcrumb
   },
   data() {
     return {
       showChange: false,
     };
   },
-  mounted() {},
+  mounted() { },
   computed: {
     ...mapGetters(["sidebar", "name", "avatar", "userInfo"]),
     userName() {
@@ -61,9 +53,6 @@ export default {
     },
   },
   methods: {
-    goGochooseAccountSet() {
-      this.$router.push({ path: "/chooseAccountSet" });
-    },
     toggleSideBar() {
       this.$store.dispatch("ToggleSideBar");
     },
@@ -85,7 +74,7 @@ export default {
             }, 1000);
           });
         })
-        .catch(() => {});
+        .catch(() => { });
     },
   },
 };
@@ -111,31 +100,14 @@ export default {
 
   .m-left {
     display: flex;
-  }
-
-  .m-list {
-    width: 100%;
-    display: flex;
-    color: #7f7f7f;
-    font-size: 14px;
-    font-weight: bold;
-
-    .txt {
-      color: #6981ff;
-      margin-right: 4px;
-    }
-
-    .btn {
-      margin-left: 8px;
-      cursor: pointer;
-      color: #e96979;
-    }
+    align-items: center;
   }
 
   .m-right {
     display: flex;
     align-items: center;
     height: 100%;
+
     span {
       padding: 0 4px;
     }

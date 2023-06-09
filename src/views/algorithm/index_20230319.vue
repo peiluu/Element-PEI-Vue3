@@ -1,10 +1,10 @@
 <template>
-  <h3>
+  <div class="main-content">
     <h2>算法实践_20230319</h2>
     <ol>
       <li>给定一个任意嵌套结构的对象如下，使用你熟悉的算法，将对象的属性按照层级输出到一个数组中.如下：</li>
     </ol>
-  </h3>
+  </div>
 </template>
 
 <script setup>

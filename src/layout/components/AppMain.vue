@@ -1,19 +1,12 @@
 <template>
-  <el-card class="app-main">
-    <div class="main-page">
-      <lgt-breadcrumb />
-      <!-- <template #header>
-        <lgt-breadcrumb />
-      </template> -->
-
-      <transition name="fade" mode="out-in">
-        <!-- <tags-view></tags-view> -->
-        <keep-alive :include="cachedViews">
-          <router-view :key="key"></router-view>
-        </keep-alive>
-      </transition>
-    </div>
-  </el-card>
+  <div class="app-main">
+    <transition name="fade" mode="out-in">
+      <!-- <tags-view></tags-view> -->
+      <keep-alive :include="cachedViews">
+        <router-view :key="key" />
+      </keep-alive>
+    </transition>
+  </div>
 </template>
 
 <script>
@@ -37,13 +30,18 @@ export default {
 <style lang="scss" scoped>
 .app-main {
   width: 100%;
-  min-height: calc(100vh - 92px);
-  background: #f0f2f5;
-  .main-page {
-    background: #fff;
-    padding: 0 16px 16px;
-    box-shadow: 0 2px 12px 0 #f0f2f5;
-    min-height: calc(100vh - 92px);
-  }
+  height: calc(100vh - 50px);
+  padding: 12px;
+  background: #fafafa;
+  overflow-y: auto;
+
+}
+.main-content {
+  height: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px 0 #f0f2f5;
+  background: #ffffff;
+
 }
 </style>

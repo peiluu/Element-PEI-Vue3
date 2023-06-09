@@ -30,7 +30,7 @@ export default {
 		},
 	},
 	methods: {
-		getBreadcrumb() {
+    getBreadcrumb() {
 			const matched = this.$route.matched.filter(item => item.meta.title);
 			this.levelList = matched;
 
@@ -43,7 +43,6 @@ export default {
 .breadcrumb-container {
 	display: flex;
 	align-items: center;
-	padding: 8px 0 24px;
 	font-size: 16px;
 //	color: #97a8be;
 	.el-breadcrumb {

@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Layout from "@/views/layout/Layout";
+import Layout from "@/layout/Layout";
 
 /***
  * @description 页面路由配置
@@ -81,6 +81,11 @@ export const constantRouterMap = [
         path: "index_20230424",
         component: () => import("@/views/algorithm/index_20230424"),
         meta: { title: "算法实践_20230424" },
+      },
+      {
+        path: "index_20230609",
+        component: () => import("@/views/algorithm/index_20230609"),
+        meta: { title: "算法实践_20230609" },
       },
 
     ],

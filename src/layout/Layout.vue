@@ -61,7 +61,7 @@ export default {
   z-index: 999;
 }
 .main-container {
-  min-height: 100vh;
+  height: 100%;
   transition: margin-left 0.28s;
   margin-left: 210px;
 }

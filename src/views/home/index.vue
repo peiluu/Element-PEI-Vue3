@@ -1,5 +1,7 @@
 <template>
-  
+  <div class="main-content">
+    这个一个首页
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -52,6 +54,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .item-box {
   display: flex;
+
   .el-select {
     margin-left: 16px;
   }
