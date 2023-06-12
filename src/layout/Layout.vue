@@ -1,10 +1,11 @@
+
 <template>
   <div class="app-wrapper" :class="classObj">
-    <div v-if="device === 'mobile' && sidebar.opened" class="drawer-bg" @click="handleClickOutside"></div>
-    <sidebar class="sidebar-container"></sidebar>
+    <div v-if="device === 'mobile' && sidebar.opened" class="drawer-bg" @click="handleClickOutside" />
+    <sidebar class="sidebar-container" />
     <div class="main-container">
-      <navbar></navbar>
-      <app-main></app-main>
+      <navbar />
+      <app-main />
     </div>
   </div>
 </template>

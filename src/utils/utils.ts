@@ -27,7 +27,7 @@ export const ExtAwait = () => { };
 export const setTitle = function (title) {
   // title = title ? `${title}` : "NxAdmin";
   // window.document.title = title + "-nxAdmin";
-  title = title ? `${title}` : "自定义demo";
+  title = title ? `${title}` : "自定义demo0000";
   window.document.title = title;
 };
 

@@ -72,7 +72,7 @@ module.exports = defineConfig({
   devServer: {
     host: "localhost",
     port: 9532,
-    open: true, //vue项目启动时自动打开浏览器
+    open: true, // vue项目启动时自动打开浏览器
     proxy: {
       "/api": {
         // target: 'http://192.168.28.178:8762', //代理地址，这里设置的地址会代替axios中设置的baseURL。将/api前的域名代理为http://localhost:8081

@@ -20,6 +20,6 @@ module.exports = {
     // 允许使用any类型
     "@typescript-eslint/no-explicit-any": ["off"],
     "@typescript-eslint/no-inferrable-types": "off",
-
+    "vue/multi-word-component-names": "off",
   },
 };
