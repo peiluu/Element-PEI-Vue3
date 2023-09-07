@@ -126,6 +126,11 @@ export const constantRouterMap = [
         component: () => import("@/views/vuexCharacteristic/axiosRequest"),
         meta: { title: "axios请求" },
       },
+      {
+        path: "vue3",
+        component: () => import("@/views/vuexCharacteristic/vue3"),
+        meta: { title: "Vue3" },
+      },
     ],
   },
 

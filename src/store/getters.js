@@ -16,6 +16,7 @@ const getters = {
   visitedViews: state => state.tagsView.visitedViews,
   cachedViews: state => state.tagsView.cachedViews,
   browserHeaderTitle: state => state.user.browserHeaderTitle,
-  errorLogs: state => state.errorLog.logs
+  errorLogs: state => state.errorLog.logs,
+  computedNum: state => state.vuexTest.computedNum,
 }
 export default getters

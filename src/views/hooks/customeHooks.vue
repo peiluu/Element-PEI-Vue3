@@ -18,6 +18,7 @@ const { x, y, copyX } = useMousePosition();
 <!-- <script>
 import { defineComponent } from "vue";
 // 引入hooks
+
 import useMousePosition from "../../hooks/useMousePosition";
 
 export default defineComponent({

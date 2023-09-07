@@ -6,7 +6,7 @@
 		<div>年龄：{{ userInfo.age }}</div>
 		<!-- <button v-permission></button> -->
 		<el-button type="primary">1</el-button>
-		<card />
+		<!-- <card /> -->
 	</div>
 </template>
 
@@ -24,7 +24,6 @@ export default {
 		};
 	},
 	mixins: [singleMixins],
-	beforeMount() {},
 	mounted() {
 		this.getPerson();
 		this.sendUser();
