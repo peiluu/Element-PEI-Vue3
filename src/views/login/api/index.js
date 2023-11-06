@@ -1,4 +1,4 @@
-import request from "@/utils/request";
+import { request } from "@/utils/request";
 
 // 获取验证码
 export async function getCaptcha() {

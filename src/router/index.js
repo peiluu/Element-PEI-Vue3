@@ -279,6 +279,24 @@ export const constantRouterMap = [
       },
     ],
   },
+   // 进阶课程
+   {
+    path: "/advancedTechniques",
+    component: Layout,
+    meta: { title: "进阶课程" },
+    children: [
+      {
+        path: "Index_20231030",
+        component: () => import("@/views/advancedTechniques/Index_20231030"),
+        meta: { title: "Index_20231030" },
+      },
+      // {
+      //   path: "Index_20231030",
+      //   component: () => import("@/views/advancedTechniques/Index_20231030"),
+      //   meta: { title: "Index_20231030" },
+      // },
+    ],
+  },
 ];
 
 export default createRouter({
