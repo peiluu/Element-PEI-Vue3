@@ -4,6 +4,44 @@
 @import "./sidebar.scss";
 @import "./transition.scss";
 
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  // color: $mainTextColor;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, Microsoft YaHei, Helvetica Neue, Helvetica;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(24, 144, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(24, 144, 255, 0.8);
+}
+
+::-webkit-resizer,
+::-webkit-scrollbar-corner {
+  display: none;
+}
 #app {
   height: 100%;
 }
@@ -49,6 +87,16 @@
     color: #42b983;
     font-weight: 600;
   }
+}
+.main-content {
+  height: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px 0 #f0f2f5;
+  background: #ffffff;
+}
+.content-title{
+  font-size: 18px;
 }
 
 /*BaseForm*/

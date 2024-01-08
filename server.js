@@ -44,7 +44,7 @@ app.post('/sendUser', (req, res) => {
 		});
 	}
 });
-app.listen(9532, err => {
+app.listen(8088, err => {
 	if (!err) {
 		console.log('服务器启动了');
 		// console.log(globalThis);

@@ -36,12 +36,5 @@ export default {
   overflow-y: auto;
 
 }
-.main-content {
-  height: 100%;
-  padding: 8px;
-  border-radius: 4px;
-  box-shadow: 0 2px 12px 0 #f0f2f5;
-  background: #ffffff;
 
-}
 </style>
