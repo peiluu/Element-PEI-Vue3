@@ -7,6 +7,7 @@
 
 <script setup>
 import { onMounted } from "vue";
+import { requiredNumber } from "element-plus/es/components/table-v2/src/common";
 
 
 onMounted(() => {
@@ -27,6 +28,8 @@ const init = async () => {
 }
 // 将数字替换成字符串(name) siok
 const getName = (str) => {
-F
+  return String.prototype.asyncReplaceAll = () => {
+                                                               
+  }
 }
 </script>

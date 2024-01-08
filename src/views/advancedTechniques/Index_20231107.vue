@@ -27,6 +27,6 @@ const init = async () => {
 }
 // 将数字替换成字符串(name) siok
 const getName = (str) => {
-F
+ 
 }
 </script>
