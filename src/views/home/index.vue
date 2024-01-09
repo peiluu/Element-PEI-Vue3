@@ -41,14 +41,13 @@ watchEffect(() => {
 const dobblue: object = reactive({
   a: "1"
 });
-console.log(dobblue);
 
 onMounted(() => {
-  ElMessage({
-    message: "欢迎来到首页",
-    type: "success"
-    // duration: 5 * 1000
-  });
+  // ElMessage({
+  //   message: "欢迎来到首页",
+  //   type: "success"
+  //   // duration: 5 * 1000
+  // });
 });
 </script>
 <style lang="scss" scoped>

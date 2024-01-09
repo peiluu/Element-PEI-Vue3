@@ -1,20 +1,20 @@
 # 基于Vue3 + Typescriptd实现的综合项目，集成了一个自定义UI组件库，一个组件文档库（关联部署在github的文档节点），一个代码练习目录
-##
 
-# Vue3对比Vue2的优势
-  ## 性能的提升
+## Vue3对比Vue2的优势
+  ### 性能的提升
   1. 打包大小减少41%
   2. 初次渲染快55%,更新渲染快133%
   3. 内存减少54%
 
-  ## 拥抱TypeScript
+  ### 拥抱TypeScript
   1. Vue3可以更好的支持TypeScript
 
-  ## Composition API (组合API)
+  ### Composition API (组合API)
   1. setup配置
   2. ref与reactive
   3. watch与watchEffect
   4. provide与inject
+
 ## 学习概括
 1. vuex
 2. vue-router
@@ -25,10 +25,7 @@
 7. Vue插件使用（全局定义mixins、directive、filters）
 8. express + node 搭建后台服务器
 
-
-
-
-
-
-# 相关文档地址
-  1.
+## 相关文档地址
+  1. [npm自定义组件库地址](https://www.npmjs.com/settings/pei_lu/packages)
+  2. [技术分享文档地址](https://zhuanlan.zhihu.com/p/579606010)
+  3. [github项目地址](https://github.com/peiluu/Element-PEI-Vue3)

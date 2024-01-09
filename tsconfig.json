@@ -15,29 +15,21 @@
     "sourceMap": true,
     "baseUrl": ".",
     "suppressImplicitAnyIndexErrors": true,
-    "types": [
-      "webpack-env"
-    ],
+    "types": ["webpack-env"],
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
-, "src/main.js", "shims-vue.d.ts", "src/hooks/useMousePosition.js"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "tests/**/*.tsx",
+    "src/main.js",
+    "shims-vue.d.ts",
+    "src/hooks/useMousePosition.js"
+  ],
+  "exclude": ["node_modules"]
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="main-content">
-    <h4>Vuex</h4>
+    <div class="content-title">Vuex</div>
 
     <div class="line">
       <h5>num：{{ num }}</h5>

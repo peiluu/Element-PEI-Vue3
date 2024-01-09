@@ -295,6 +295,11 @@ export const constantRouterMap = [
         component: () => import("@/views/advancedTechniques/Index_20231030"),
         meta: { title: "Index_20231030" },
       },
+      {
+        path: "Index_20240109",
+        component: () => import("@/views/advancedTechniques/Index_20231030"),
+        meta: { title: "Index_20231030" },
+      },
       // {
       //   path: "Index_20231030",
       //   component: () => import("@/views/advancedTechniques/Index_20231030"),
