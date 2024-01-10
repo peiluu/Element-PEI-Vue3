@@ -48,7 +48,6 @@ onMounted(() => {
 const $ = {
   // 在ajax中适配dojo的语法，外部调用还是使用$.ajax，抹平了在dojo环境下没有$.ajax方法
   ajax() {
-    console.log(1);
   }
 };
 

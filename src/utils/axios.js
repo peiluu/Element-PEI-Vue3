@@ -1,7 +1,7 @@
 /* eslint-disable no-unreachable */
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
-import config from '@/config/index.js';
+import config from '@/config/index.ts';
 import { ElMessage } from 'element-plus';
 // const querystring = require('querystringify');
 // import store from '../store';

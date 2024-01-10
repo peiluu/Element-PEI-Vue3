@@ -13,7 +13,7 @@ import store from "@/store";
 // 引入自定义插件
 import plugin from '@/plugin/index';
 
-// 调用自定义组件库
+// 引入自定义组件库
 import ElementPeiVue3 from 'element-pei-vue3';
 import 'element-pei-vue3/componentsdist/css/index.css';
 
@@ -35,3 +35,4 @@ for (const iconName in ElIcons) {
 }
 
 app.use(router).use(store).use(plugin, { store }).use(ElementPlus).use(ElementPeiVue3).mount("#app");
+// app.use(router).use(store).use(plugin, { store }).use(ElementPlus).mount("#app");

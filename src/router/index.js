@@ -92,7 +92,6 @@ export const constantRouterMap = [
         component: () => import("@/views/algorithm/index_20240108"),
         meta: { title: "算法实践_20240108" },
       },
-
     ],
   },
   // vue原理
@@ -284,8 +283,8 @@ export const constantRouterMap = [
       },
     ],
   },
-   // 进阶课程
-   {
+  // 进阶课程
+  {
     path: "/advancedTechniques",
     component: Layout,
     meta: { title: "进阶课程" },
@@ -300,10 +299,19 @@ export const constantRouterMap = [
         component: () => import("@/views/advancedTechniques/Index_20231030"),
         meta: { title: "Index_20231030" },
       },
-      // {
-      //   path: "Index_20231030",
-      //   component: () => import("@/views/advancedTechniques/Index_20231030"),
-      //   meta: { title: "Index_20231030" },
+      // },
+    ],
+  },
+  {
+    path: "/tryComponentLibrary",
+    component: Layout,
+    meta: { title: "试用组件库" },
+    children: [
+      {
+        path: "Index_20231030",
+        component: () => import("@/views/tryComponentLibrary/Index"),
+        meta: { title: "试用组件库" },
+      },
       // },
     ],
   },

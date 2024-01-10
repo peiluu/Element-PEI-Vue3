@@ -1,6 +1,7 @@
 <template>
   <div class="main-content">
-    这个一个首页
+    <div class="content-title">试用自定义组件库</div>
+    <QuarterDatePicker :pickerType="'季'" />
   </div>
 </template>
 
@@ -8,7 +9,6 @@
 import { reactive, defineProps, ref, watch, onMounted, watchEffect } from "vue";
 import { ElMessage } from "element-plus";
 
-const a = {};
 const props: String = defineProps({
   dialogStatus: {
     type: String,

@@ -14,12 +14,14 @@
     "useDefineForClassFields": true,
     "sourceMap": true,
     "baseUrl": ".",
+    // "ignoreDeprecations": "5.0",
     "suppressImplicitAnyIndexErrors": true,
     "types": ["webpack-env"],
     "paths": {
       "@/*": ["src/*"]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "outDir": "dist"
   },
   "include": [
     "src/**/*.ts",

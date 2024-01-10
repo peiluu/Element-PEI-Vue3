@@ -13,13 +13,12 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const list = {
   // card: './components/lib/card/index.js'
 };
-
+// 循环打包
 async function makeList(dirPath, list) {
   const files = glob.sync(`${dirPath}/**/index.js`);
 
   files.forEach((item) => {
     const component = item.split(/[/.]/)[2];
-
     list[component] = `./${item}`;
   });
 }

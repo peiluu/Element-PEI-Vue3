@@ -33,7 +33,7 @@ app.get("/person", (req, res) => {
   });
 });
 
-app.post("/sendUser", (req, res) => {
+app.post("/api/sendUser", (req, res) => {
   if (req) {
     res.send({
       code: 0,
@@ -44,10 +44,8 @@ app.post("/sendUser", (req, res) => {
     });
   }
 });
-app.listen(8088, (err) => {
+app.listen(8090, (err) => {
   if (!err) {
     console.log("服务器启动了");
-    // console.log(globalThis);
-    // console.log(global);
   }
 });
