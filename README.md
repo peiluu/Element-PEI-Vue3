@@ -32,6 +32,7 @@
 
 ## 四、项目结构、
 ```
+|--components  // 组件库代码
 |--dist    //编译输出
 |--node_modules     //npm包
 |--src    //项目代码

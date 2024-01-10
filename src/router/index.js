@@ -31,7 +31,7 @@ export const constantRouterMap = [
     children: [
       {
         path: "home",
-        component: () => import("@/views/home/index"),
+        component: () => import("@/views/home/Index"),
         meta: { title: "首页", icon: "home" },
       },
     ],
@@ -308,7 +308,7 @@ export const constantRouterMap = [
     meta: { title: "试用组件库" },
     children: [
       {
-        path: "Index_20231030",
+        path: "quarterDatePicker",
         component: () => import("@/views/tryComponentLibrary/Index"),
         meta: { title: "试用组件库" },
       },

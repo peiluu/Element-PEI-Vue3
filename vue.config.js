@@ -71,16 +71,16 @@ module.exports = defineConfig({
   // },
   devServer: {
     host: "localhost",
-    port: 8088,
+    port: 8090,
     open: true, // vue项目启动时自动打开浏览器
     proxy: {
       "/api": {
         // target: 'http://192.168.28.178:8762', //代理地址，这里设置的地址会代替axios中设置的baseURL。将/api前的域名代理为http://localhost:8081
-        target: "http://localhost:8088",
+        target: "http://localhost:8090",
         pathRewrite: { "/api": "/" }, // 重写/api , 这个 /api 已经在 pathRewrite 被替换掉了，接口就变成404
       },
       "/sendUser": {
-        target: "http://localhost:8088",
+        target: "http://localhost:8090",
         changeOrigin: true, //是否跨域
       },
     },

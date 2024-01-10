@@ -33,7 +33,7 @@ app.get("/person", (req, res) => {
   });
 });
 
-app.post("/api/sendUser", (req, res) => {
+app.post("/sendUser", (req, res) => {
   if (req) {
     res.send({
       code: 0,

@@ -1,37 +1,30 @@
 <template>
-  <div class="com-quarter-dateDicker">
-    <!-- <div class="quarter-left">
-      <el-radio v-model="radioType" label="quarter">季度</el-radio>
-      <el-radio v-model="radioType" label="month">月度</el-radio>
-    </div> -->
-    <template v-if="pickerType === '季'">
-      <mark style="position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,0);z-index:999;" v-show="showQuarter" @click.stop="showQuarter = false"></mark>
-      <div class="quarter-input-box">
-        <el-input :disabled="dateDisabled" placeholder="请选择" v-model="form.formatQuarterValue" style="width:100%;" class="elWidth" @focus="showQuarter = true">
-          <i slot="prefix" class="el-input__icon el-icon-date"></i>
-        </el-input>
-        <i class="el-input__icon el-icon-circle-close" v-if="!dateDisabled" @click="clearDate"></i>
-      </div>
+  <div class="c-quarter-dateDicker">
+    <mark style="position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,0);z-index:999;" v-show="showQuarter" @click.stop="showQuarter = false"></mark>
+    <div class="quarter-input-box">
+      <el-input :disabled="dateDisabled" placeholder="请选择" v-model="form.formatQuarterValue" style="width:100%;" class="elWidth" @focus="showQuarter = true">
+        <i slot="prefix" class="el-input__icon el-icon-date"></i>
+      </el-input>
+      <i class="el-input__icon el-icon-circle-close" v-if="!dateDisabled" @click="clearDate"></i>
+    </div>
 
-      <el-card class="box-card" v-show="showQuarter" style="width:100%">
-        <div slot="header" class="clearfix" style="text-align:center;padding:0">
+    <el-card class="quarter-panel" v-show="showQuarter" style="width:100%">
+      <template #header>
+        <div class="clearfix" tyle="text-align:center;padding:0">
           <button type="button" aria-label="前一年" :class="{ notallow: preDateDisabled || currentDateDisabled }" class="el-picker-panel__icon-btn el-date-picker__prev-btn el-icon-d-arrow-left" @click="prev"></button>
           <span role="button" class="el-date-picker__header-label">{{ year }}年</span>
           <button type="button" aria-label="后一年" @click="next" :class="{ notallow: nextDateDisabled }" class="el-picker-panel__icon-btn el-date-picker__next-btn el-icon-d-arrow-right"></button>
         </div>
-        <div class="text item" style="text-align:center;">
-          <el-button type="text" size="medium" :class="{ notallow: getDateDisabled(1) }" style="width:40%;color: #606266;float:left;" @click="selectQuarter(0)">第一季度</el-button>
-          <el-button type="text" size="medium" :class="{ notallow: getDateDisabled(2) }" style="float:right;width:40%;color: #606266;" @click="selectQuarter(1)">第二季度</el-button>
-        </div>
-        <div class="text item" style="text-align:center;">
-          <el-button type="text" size="medium" :class="{ notallow: getDateDisabled(3) }" style="width:40%;color: #606266;float:left;" @click="selectQuarter(2)">第三季度</el-button>
-          <el-button type="text" size="medium" :class="{ notallow: getDateDisabled(4) }" style="float:right;width:40%;color: #606266;" @click="selectQuarter(3)">第四季度</el-button>
-        </div>
-      </el-card>
-    </template>
-    <template v-else>
-      <el-date-picker :disabled="dateDisabled" :clearable="clearable" value-format="yyyyMM" v-model="form.monthValue" type="month" placeholder="请选择" @change="selectMonth" :picker-options="getPickerOptions()" />
-    </template>
+      </template>
+      <div class="text item" style="text-align:center;">
+        <el-button plain :class="{ notallow: getDateDisabled(1) }" style="width:40%;color: #606266;float:left;" @click="selectQuarter(0)">第一季度</el-button>
+        <el-button plain :class="{ notallow: getDateDisabled(2) }" style="float:right;width:40%;color: #606266;" @click="selectQuarter(1)">第二季度</el-button>
+      </div>
+      <div class="text item" style="text-align:center;">
+        <el-button plain :class="{ notallow: getDateDisabled(3) }" style="width:40%;color: #606266;float:left;" @click="selectQuarter(2)">第三季度</el-button>
+        <el-button plain :class="{ notallow: getDateDisabled(4) }" style="float:right;width:40%;color: #606266;" @click="selectQuarter(3)">第四季度</el-button>
+      </div>
+    </el-card>
   </div>
 </template>
 <script>
@@ -269,18 +262,18 @@ export default {
   position: relative;
 }
 
-.box-card {
+.quarter-panel {
   position: absolute;
   top: 40px;
-  /* left: 22px; */
-  padding: 0 3px 20px;
+  width: 100%;
+  padding: 0 4px 20px;
   z-index: 9999;
 }
 
-.com-quarter-dateDicker {
+.c-quarter-dateDicker {
   display: flex;
   align-items: center;
-  /*  width: 100%; */
+  width: 100%;
 }
 
 .quarter-left {

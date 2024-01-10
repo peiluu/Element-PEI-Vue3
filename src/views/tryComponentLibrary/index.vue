@@ -1,13 +1,22 @@
 <template>
   <div class="main-content">
     <div class="content-title">试用自定义组件库</div>
-    <QuarterDatePicker :pickerType="'季'" />
+    <el-card class="content-card">
+      <template #header>
+        <div class="card-header">
+          <span>季度选择器</span>
+        </div>
+      </template>
+      <QuarterDatePicker />
+    </el-card>
+
   </div>
 </template>
 
 <script setup lang="ts">
 import { reactive, defineProps, ref, watch, onMounted, watchEffect } from "vue";
 import { ElMessage } from "element-plus";
+import QuarterDatePicker from "../../../components/lib/quarterDatePicker/src/Index";
 
 const props: String = defineProps({
   dialogStatus: {
@@ -56,5 +65,9 @@ onMounted(() => {
   .el-select {
     margin-left: 16px;
   }
+}
+
+.content-card {
+  width: 33%;
 }
 </style>
