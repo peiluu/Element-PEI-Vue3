@@ -4,7 +4,7 @@
 export const siteData = {
   "title": "",
   "description": "",
-  "base": "/vuei-vue2",
+  "base": "/element-pei-vue3",
   "headTags": [],
   "pages": [
     {

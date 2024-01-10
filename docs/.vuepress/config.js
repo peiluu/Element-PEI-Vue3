@@ -1,5 +1,5 @@
 module.exports = {
-	base: '/vuei-vue2', 
+	base: '/Element-PEI-V+ue3',
 	themeConfig: {
 		head: [['link', { rel: 'icon', href: `/logo.png` }]],
 		sidebar: [
@@ -18,4 +18,3 @@ module.exports = {
 		],
 	},
 };
-  
