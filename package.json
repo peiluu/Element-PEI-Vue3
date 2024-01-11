@@ -1,6 +1,6 @@
 {
   "name": "element-pei-vue3",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Vue3版本-自定义组件库",
   "author": "pei_lu",
   "scripts": {
@@ -21,7 +21,7 @@
   ],
   "dependencies": {
     "axios": "^1.2.1",
-    "element-pei-vue3": "^0.0.2",
+    "element-pei-vue3": "^0.0.3",
     "element-plus": "^2.2.27",
     "js-cookie": "^3.0.1",
     "moment": "^2.30.1",

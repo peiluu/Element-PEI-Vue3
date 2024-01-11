@@ -1,6 +1,8 @@
 <template>
   <div class="c-quarter-dateDicker">
-    <mark style="position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,0);z-index:999;" v-show="showQuarter" @click.stop="showQuarter = false"></mark>
+
+    2
+    <!-- <mark style="position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,0);z-index:999;" v-show="showQuarter" @click.stop="showQuarter = false"></mark>
     <div class="quarter-input-box">
       <el-input :disabled="dateDisabled" placeholder="请选择" v-model="form.formatQuarterValue" style="width:100%;" class="elWidth" @focus="showQuarter = true">
         <i slot="prefix" class="el-input__icon el-icon-date"></i>
@@ -24,7 +26,7 @@
         <el-button plain :class="{ notallow: getDateDisabled(3) }" style="width:40%;color: #606266;float:left;" @click="selectQuarter(2)">第三季度</el-button>
         <el-button plain :class="{ notallow: getDateDisabled(4) }" style="float:right;width:40%;color: #606266;" @click="selectQuarter(3)">第四季度</el-button>
       </div>
-    </el-card>
+    </el-card> -->
   </div>
 </template>
 <script>
