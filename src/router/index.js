@@ -92,6 +92,11 @@ export const constantRouterMap = [
         component: () => import("@/views/algorithm/index_20240108"),
         meta: { title: "算法实践_20240108" },
       },
+      {
+        path: "index_20240118",
+        component: () => import("@/views/algorithm/Index_20240118"),
+        meta: { title: "算法实践_20240118" },
+      },
     ],
   },
   // vue原理
@@ -300,6 +305,24 @@ export const constantRouterMap = [
         meta: { title: "Index_20231030" },
       },
       // },
+    ],
+  },
+  {
+    path: "/questionDesign",
+    component: Layout,
+    meta: { title: "前端题库" },
+    children: [
+      {
+        path: "Design_20240111",
+        component: () => import("@/views/questionDesign/Design_20240111"),
+        meta: { title: "树形节点搜索关键字返回路径" },
+      },
+      {
+        path: "Design_20240118",
+        component: () => import("@/views/questionDesign/Design_20240118"),
+        meta: { title: "Design_20240118" },
+      },
+
     ],
   },
   {
