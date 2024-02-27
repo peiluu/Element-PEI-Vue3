@@ -52,6 +52,7 @@ export default {
   position: relative;
   height: 100%;
   width: 100%;
+  color: #333333;
 }
 .drawer-bg {
   background: #000;
@@ -66,5 +67,7 @@ export default {
   height: 100%;
   transition: margin-left 0.28s;
   margin-left: 210px;
+  background: $bgColor;
+
 }
 </style>

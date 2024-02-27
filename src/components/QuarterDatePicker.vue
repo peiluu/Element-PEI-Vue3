@@ -132,7 +132,7 @@ export default {
         if (val) {
           // 初始化年份
           const date = new Date(this.defaultValue.substring(0, 4)).getFullYear();
-          this.$set(this, 'year', date)
+          this.year = date
           this.form = { ...this.form, ...getCurrentDate(this.defaultValue) }
           const formData = this.pickerType == '季' ? this.form.quarterValue : this.form.monthValue
           this.$emit("getQuarterPickerFrom", this.propsParam, formData);
@@ -239,7 +239,6 @@ export default {
       this.$emit("getQuarterPickerFrom", this.propsParam, value);
     },
     intiForm() {
-      // this.$set(this.form, { ...this.form, ...getCurrentSsq() });
       this.form = { ...this.form, ...getCurrentSsq() }
       const formData = this.pickerType == '季' ? this.form.quarterValue : this.form.monthValue
       this.$emit("getQuarterPickerFrom", this.propsParam, formData);

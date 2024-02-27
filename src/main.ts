@@ -33,6 +33,5 @@ const app = createApp(App);
 for (const iconName in ElIcons) {
   app.component(iconName, ElIcons[iconName]);
 }
-
 app.use(router).use(store).use(plugin, { store }).use(ElementPlus).use(ElementPeiVue3).mount("#app");
 // app.use(router).use(store).use(plugin, { store }).use(ElementPlus).mount("#app");

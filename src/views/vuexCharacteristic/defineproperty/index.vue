@@ -58,7 +58,7 @@ export default {
 
 		addProty() {
 			// 给对象添加响应式属性
-			this.$set(this.form, 'name', "张三")
+			// $set(this.form, 'name', "张三")
 		},
 
 		defineProperty() {

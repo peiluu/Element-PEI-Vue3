@@ -39,8 +39,8 @@ export default {
     add() {
       // Avoid adding reactive properties to a Vue instance or its root $data at runtime - declare it upfront in the data option.
       // 无法在vue实例或者根数据对象上直接添加属性
-      // this.$set(this, 'name', '张三')
-      this.$set(this.person, 'name', '李四')
+      // $set(this, 'name', '张三')
+      // $set(this.person, 'name', '李四')
     },
     changeArr() {
       // Vue里面无法检测到直接通过索引值改变的数组。因为数组里的每一个元素不是通过set 和get来实现监视了

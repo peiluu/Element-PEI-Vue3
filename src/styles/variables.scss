@@ -1,41 +1,28 @@
 $sideMenuRowHeight: 40px;
-
-$blueColor: #1B90FF;
-$greenColor: #44BEC7;
+$bgColor: #e8ebed;
+$blueColor: #1b90ff;
+$greenColor: #44bec7;
 // 边框颜色
 $borderColor: #e4e7ed;
 // 页面绿色
 $primaryGreenColor: #00b390;
-$yellowColor: #FDC13B;
-$mainTextColor:#333333;
+$yellowColor: #fdc13b;
+$mainTextColor: #333333;
 
 // sidebar
-$menuText:#333333;
-$menuActiveText:#010102;
-$subMenuActiveText:#f4f4f5;
+$menuText: #333333;
+$menuActiveText: #010102;
+$subMenuActiveText: #f4f4f5;
 
-$menuBg:#fafafa;
-$menuHover:#263445;
+$menuHover: #263445;
 
+$subMenuBg: #ffffff;
+$subMenuHover: linear-gradient(90deg, transparent, $bgColor, $bgColor);
 
-$subMenuBg:#ffffff;
-$subMenuHover: linear-gradient(90deg, transparent, #fafafa, #fafafa);
-
-$sideBarWidth:230px;
+$sideBarWidth: 230px;
 $headerHeight: 50px;
 $tabHeight: 40px;
 $sideMenuHeight: calc(100% - #{$headerHeight} - #{$headerHeight});
 $containerPadding: 10px;
 $containerHeight: calc(100% - 20px);
 $containerHeightWithTab: calc(100% - #{$tabHeight} - 20px);
-
-:export {
-  // menuText: $menuText;
-  // menuActiveText: $menuActiveText;
-  // subMenuActiveText: $subMenuActiveText;
-  // menuBg: $menuBg;
-  // menuHover: $menuHover;
-  // subMenuBg: $subMenuBg;
-  // subMenuHover: $subMenuHover;
-  sideBarWidth: $sideBarWidth;
-}

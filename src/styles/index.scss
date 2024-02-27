@@ -13,11 +13,11 @@ html {
 body {
   // color: $mainTextColor;
   font-size: 16px;
-  // color: $mainTextColor;
+  color: $mainTextColor;
   font-family: PingFangSC-Regular, Microsoft YaHei, Helvetica Neue, Helvetica;
 }
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
   height: 12px;
 }
 
@@ -45,6 +45,13 @@ body {
 }
 #app {
   height: 100%;
+}
+.app-main {
+  width: 100%;
+  height: calc(100vh - 50px);
+  padding: 8px;
+  background: #e8ebed;;
+  overflow-y: auto;
 }
 
 .clearfix {
@@ -91,10 +98,12 @@ body {
 }
 .main-content {
   height: 100%;
-  padding: 8px;
+  padding: 16px 8px;
+  overflow-y: scroll;
   border-radius: 4px;
   box-shadow: 0 2px 12px 0 #f0f2f5;
   background: #ffffff;
+
 }
 .content-title{
   font-size: 18px;
