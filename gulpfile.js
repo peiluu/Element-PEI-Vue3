@@ -11,4 +11,3 @@ gulp.task('sass', async () => {
 		.pipe(minifyCSS())
 		.pipe(gulp.dest('componentsdist/distcss'));
 });
-	

@@ -1,60 +1,32 @@
 <template>
   <div class="main-content">
-    这个一个首页
+    <div>
+      <el-button @click="changeLocale('zh')">切换为中文</el-button>
+      <el-button @click="changeLocale('en')">切换为英文</el-button>
+    </div>
+
+    <ul>
+      <li>{{ $t("navigateBar.hotspot") }}</li>
+      <li>{{ $t("navigateBar.experience") }}</li>
+      <li>{{ $t("navigateBar.focus") }}</li>
+      <li>{{ $t("navigateBar.recommend") }}</li>
+    </ul>
+    <ol>
+      <li>{{ $t("tabs.work") }}</li>
+      <li>{{ $t("tabs.private") }}</li>
+      <li>{{ $t("tabs.collect") }}</li>
+      <li>{{ $t("tabs.like") }}</li>
+    </ol>
   </div>
 </template>
 
-<script setup lang="ts">
-import { reactive, defineProps, ref, watch, onMounted, watchEffect } from "vue";
-import { ElMessage } from "element-plus";
+<script setup>
+import { useI18n } from "vue-i18n";
+// 。Vue I18 是 Vue.js 的国际化插件，它可以轻松地将一些本地化功能集成到应用程序中。
+const { locale } = useI18n();
 
-const a = {};
-const props: String = defineProps({
-  dialogStatus: {
-    type: String,
-    default: ""
-  },
-  dialogFormVisible: {
-    type: Boolean,
-    default: false
-  },
-  subjectCate: {
-    type: Number,
-    default: 0
-  },
-  subjectCateList: {
-    type: Array
-  }
-});
-let checked = ref(false);
-
-// 监听数据的变化
-watch(checked, val => {
-  console.log(111, val);
-});
-interface dobblueType {
-  a: string;
-}
-watchEffect(() => {
-});
-const dobblue: object = reactive({
-  a: "1"
-});
-
-onMounted(() => {
-  // ElMessage({
-  //   message: "欢迎来到首页",
-  //   type: "success"
-  //   // duration: 5 * 1000
-  // });
-});
+// 切换语言
+const changeLocale = (lang) => {
+  locale.value = lang;
+};
 </script>
-<style lang="scss" scoped>
-.item-box {
-  display: flex;
-
-  .el-select {
-    margin-left: 16px;
-  }
-}
-</style>

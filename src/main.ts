@@ -1,5 +1,7 @@
 // 引入外部库
 import { createApp } from "vue";
+import { createI18n } from 'vue-i18n';
+
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import * as ElIcons from "@element-plus/icons-vue";
@@ -24,6 +26,21 @@ import 'element-pei-vue3/componentsdist/css/index.css';
 
 // 相对路径引入
 import App from "./App.vue";
+import en from './langurage/en';
+import zh from './langurage/zh';
+
+// src/main.js
+const messages = {
+  en,
+  zh
+}
+// 。Vue I18 是 Vue.js 的国际化插件，它可以轻松地将一些本地化功能集成到应用程序中。
+const i18n = createI18n({
+  legacy: false,  // 设置为 false，启用 composition API 模式
+  messages,
+  locale: 'en'  // 设置默认语言
+})
+console.log(i18n)
 
 const app = createApp(App);
 // 添加全局对象上的属性和方法，后续在Vue实例里都能直接通过this访问
@@ -33,5 +50,5 @@ const app = createApp(App);
 for (const iconName in ElIcons) {
   app.component(iconName, ElIcons[iconName]);
 }
-app.use(router).use(store).use(plugin, { store }).use(ElementPlus).use(ElementPeiVue3).mount("#app");
+app.use(router).use(store).use(plugin, { store }).use(ElementPlus).use(ElementPeiVue3).use(i18n).mount("#app");
 // app.use(router).use(store).use(plugin, { store }).use(ElementPlus).mount("#app");

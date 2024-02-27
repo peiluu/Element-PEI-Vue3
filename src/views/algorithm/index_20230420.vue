@@ -1,5 +1,5 @@
 <template>
-  <h3>
+  <div class="main-content">
     <h2>算法实践_20230420</h2>
     <ol>
       <li>已知圆的半径为1, 用javascript算法, 实现每次都返回不同的坐标值, 且坐标值都在圆内.</li>
@@ -7,10 +7,10 @@
     <h4>
       <el-card>
         <el-button type="primary" @click="getData">获取坐标</el-button>
-         随机坐标为：X: {{coordinate.x}}， Y：{{coordinate.y}}
+        随机坐标为：X: {{ coordinate.x }}， Y：{{ coordinate.y }}
       </el-card>
     </h4>
-  </h3>
+  </div>
 </template>
 
 <script setup>
@@ -20,7 +20,7 @@ import { onMounted, reactive } from "vue";
 const cacheList = reactive([]);
 const coordinate = reactive({});
 
-onMounted(() => {});
+onMounted(() => { });
 /***
  * @param radius 半径, 输入 1
  * @returns 随机坐标
