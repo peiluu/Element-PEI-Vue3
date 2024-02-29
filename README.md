@@ -40,7 +40,7 @@
   |--config       //公共配置
   |--const     // 抽取常量
   |--hook         // 公共hooks
-  |--pages  // 主包
+  |--views  // 主包
     |--auth    //授权
     |--bindcard //绑卡
     |--card        //卡券
@@ -61,20 +61,6 @@
     |--treat     //门诊缴费
     |--waiting    //支付等待
     |--webview
-  |--pkg1  // 分包pkg1
-    |--financialpayment  // 财务缴费
-    |--numberquery // 号源助手
-    |--surgery // 手术全流程
-    |--survey // 问卷调查
-    |--usercenter// 个人中心
-    |--visualization // 可视化
-  |--pkg2 // 分包pkg2
-    |--financialpayment  // 财务缴费
-    |--numberquery       // 号源助手
-    |--surgery // 手术全流程
-    |--survey // 问卷调查
-    |--usercenter  // 个人中心
-    |--visualization  // 可视化
   |--resources// 公共资源
   |--static  // 静态资源
   |--utils //工具类

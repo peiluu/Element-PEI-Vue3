@@ -16,12 +16,12 @@ const iconfontUrl = `//at.alicdn.com/t/font_$key.css`;
 const codeUrl = `${baseURL}/code`;
 const env = process.env;
 
-// if (env.NODE_ENV === 'development') {
-// 	baseURL = `http://192.168.6.170:8765`; // 开发环境地址
-// } else if (env.NODE_ENV === 'production') {
-// 	baseURL = `http://192.168.6.170:8765`; // 生产环境地址
-// } else if (env.NODE_ENV === 'test') {
-// 	baseURL = `http://192.168.6.170:8765`; // 测试环境地址
-// }
+if (env.NODE_ENV === 'development') {
+	baseURL = `http://192.168.6.170:8765`; // 开发环境地址
+} else if (env.NODE_ENV === 'production') {
+	baseURL = `http://192.168.6.170:8765`; // 生产环境地址
+} else if (env.NODE_ENV === 'test') {
+	baseURL = `http://192.168.6.170:8765`; // 测试环境地址
+}
 
 export { baseURL, iconfontUrl, iconfontVersion, codeUrl, env };

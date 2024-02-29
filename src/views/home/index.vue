@@ -1,7 +1,8 @@
 <template>
   <div class="main-content">
     <div>
-      <el-button @click="changeLocale('zh')">切换为中文</el-button>
+      <el-button type="primary" @click="changeLocale('zh')">切换为中文</el-button>
+      <el-button type="primary" @click="changeLocale('zh')">切换为中文</el-button>
       <el-button @click="changeLocale('en')">切换为英文</el-button>
     </div>
 

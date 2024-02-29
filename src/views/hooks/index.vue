@@ -1,5 +1,10 @@
 <template>
-  <div></div>
+  <div class="main-content">
+    <div class="item-left">
+      
+    </div>
+
+  </div>
 </template>
 
 <script setup>

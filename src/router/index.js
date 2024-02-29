@@ -43,6 +43,11 @@ export const constantRouterMap = [
     meta: { title: "算法实践" },
     children: [
       {
+        path: "index_20240128",
+        component: () => import("@/views/algorithm/Index_20240228"),
+        meta: { title: "算法实践_20240228" },
+      },
+      {
         path: "index_20230319",
         component: () => import("@/views/algorithm/index_20230319"),
         meta: { title: "算法实践_20230319" },

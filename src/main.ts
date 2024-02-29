@@ -19,12 +19,10 @@ import plugin from '@/plugin/index';
 import ElementPeiVue3 from 'element-pei-vue3';
 import 'element-pei-vue3/componentsdist/css/index.css';
 
-
-// import plugins from "@/plugins";
-
-// import cookies from "@/utils/cookies
-
 // 相对路径引入
+import '@/styles/elementPlus/element-costom.scss';
+// import '@/styles/elementPlus/dark-css-vars.scss';
+
 import App from "./App.vue";
 import en from './langurage/en';
 import zh from './langurage/zh';
@@ -40,7 +38,6 @@ const i18n = createI18n({
   messages,
   locale: 'en'  // 设置默认语言
 })
-console.log(i18n)
 
 const app = createApp(App);
 // 添加全局对象上的属性和方法，后续在Vue实例里都能直接通过this访问
