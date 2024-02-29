@@ -13,13 +13,13 @@ export const constantRouterMap = [
   },
   {
     path: "/login",
-    component: () => import("@/views/login/index"),
+    component: () => import("@/views/login/Index"),
     hidden: true,
     meta: { title: "登录" },
   },
   {
     path: "/register",
-    component: () => import("@/views/login/register"),
+    component: () => import("@/views/login/register/Index"),
     meta: { title: "注册" },
     hidden: true,
   },
@@ -43,62 +43,62 @@ export const constantRouterMap = [
     meta: { title: "算法实践" },
     children: [
       {
-        path: "index_20240128",
+        path: "Index_20240128",
         component: () => import("@/views/algorithm/Index_20240228"),
         meta: { title: "算法实践_20240228" },
       },
       {
-        path: "index_20230319",
-        component: () => import("@/views/algorithm/index_20230319"),
+        path: "Index_20230319",
+        component: () => import("@/views/algorithm/Index_20230319"),
         meta: { title: "算法实践_20230319" },
       },
       {
-        path: "index_20230320",
-        component: () => import("@/views/algorithm/index_20230320"),
+        path: "Index_20230320",
+        component: () => import("@/views/algorithm/Index_20230320"),
         meta: { title: "算法实践_20230320" },
       },
       {
-        path: "index_20230321",
-        component: () => import("@/views/algorithm/index_20230321"),
+        path: "Index_20230321",
+        component: () => import("@/views/algorithm/Index_20230321"),
         meta: { title: "算法实践_20230321" },
       },
       {
-        path: "index_20230414",
-        component: () => import("@/views/algorithm/index_20230414"),
+        path: "Index_20230414",
+        component: () => import("@/views/algorithm/Index_20230414"),
         meta: { title: "算法实践_20230414" },
       },
       {
-        path: "index_20230418",
-        component: () => import("@/views/algorithm/index_20230418"),
+        path: "Index_20230418",
+        component: () => import("@/views/algorithm/Index_20230418"),
         meta: { title: "算法实践_20230418" },
       },
       {
-        path: "index_20230420",
-        component: () => import("@/views/algorithm/index_20230420"),
+        path: "Index_20230420",
+        component: () => import("@/views/algorithm/Index_20230420"),
         meta: { title: "算法实践_20230420" },
       },
       {
-        path: "index_20230421",
-        component: () => import("@/views/algorithm/index_20230421"),
+        path: "Index_20230421",
+        component: () => import("@/views/algorithm/Index_20230421"),
         meta: { title: "算法实践_20230421" },
       },
       {
-        path: "index_20230424",
-        component: () => import("@/views/algorithm/index_20230424"),
+        path: "Index_20230424",
+        component: () => import("@/views/algorithm/Index_20230424"),
         meta: { title: "算法实践_20230424" },
       },
       {
-        path: "index_20230609",
-        component: () => import("@/views/algorithm/index_20230609"),
+        path: "Index_20230609",
+        component: () => import("@/views/algorithm/Index_20230609"),
         meta: { title: "算法实践_20230609" },
       },
       {
-        path: "index_20240108",
-        component: () => import("@/views/algorithm/index_20240108"),
+        path: "Index_20240108",
+        component: () => import("@/views/algorithm/Index_20240108"),
         meta: { title: "算法实践_20240108" },
       },
       {
-        path: "index_20240118",
+        path: "Index_20240118",
         component: () => import("@/views/algorithm/Index_20240118"),
         meta: { title: "算法实践_20240118" },
       },
@@ -112,37 +112,37 @@ export const constantRouterMap = [
     children: [
       {
         path: "dataResponsive",
-        component: () => import("@/views/vuexCharacteristic/dataResponsive"),
+        component: () => import("@/views/vuexCharacteristic/dataResponsive/Index"),
         meta: { title: "数据响应式" },
       },
       {
         path: "defineproperty",
-        component: () => import("@/views/vuexCharacteristic/defineproperty"),
+        component: () => import("@/views/vuexCharacteristic/defineproperty/Index"),
         meta: { title: "数据代理" },
       },
       {
         path: "vuerouter",
-        component: () => import("@/views/vuexCharacteristic/vuerouter"),
+        component: () => import("@/views/vuexCharacteristic/vuerouter/Index"),
         meta: { title: "vuerouter" },
       },
       {
         path: "vuex",
-        component: () => import("@/views/vuexCharacteristic/vuex"),
+        component: () => import("@/views/vuexCharacteristic/vuex/Index"),
         meta: { title: "vuex" },
       },
       {
         path: "vuecomponent",
-        component: () => import("@/views/vuexCharacteristic/vuecomponent"),
+        component: () => import("@/views/vuexCharacteristic/vuecomponent/Index"),
         meta: { title: "vuecomponent" },
       },
       {
         path: "axiosRequest",
-        component: () => import("@/views/vuexCharacteristic/axiosRequest"),
+        component: () => import("@/views/vuexCharacteristic/axiosRequest/Index"),
         meta: { title: "axios请求" },
       },
       {
         path: "vue3",
-        component: () => import("@/views/vuexCharacteristic/vue3"),
+        component: () => import("@/views/vuexCharacteristic/vue3/Index"),
         meta: { title: "Vue3" },
       },
     ],
@@ -156,17 +156,17 @@ export const constantRouterMap = [
     children: [
       {
         path: "basic",
-        component: () => import("@/views/ES6"),
+        component: () => import("@/views/ES6/Index"),
         meta: { title: "ES6 基础" },
       },
       {
         path: "generator",
-        component: () => import("@/views/ES6/generator"),
+        component: () => import("@/views/ES6/generator/Index"),
         meta: { title: "generator" },
       },
       {
         path: "observer",
-        component: () => import("@/views/ES6/observer"),
+        component: () => import("@/views/ES6/observer/Index"),
         meta: { title: "observer" },
       },
     ],
@@ -182,11 +182,11 @@ export const constantRouterMap = [
         component: () => import("@/views/typeScript/basicType"),
         meta: { title: "基础类型" },
       },
-      {
-        path: "basicType",
-        component: () => import("@/views/typeScript/basicType"),
-        meta: { title: "类型断言" },
-      },
+      // {
+      //   path: "basicType",
+      //   component: () => import("@/views/typeScript/basicType/Index"),
+      //   meta: { title: "类型断言" },
+      // },
     ],
   },
   // Hooks实践
@@ -197,7 +197,7 @@ export const constantRouterMap = [
     children: [
       {
         path: "hooks",
-        component: () => import("@/views/hooks/index"),
+        component: () => import("@/views/hooks/Index"),
         meta: { title: "Hooks钩子" },
       },
       {

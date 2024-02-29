@@ -1,7 +1,7 @@
-// import demo from './demo/src/index.vue';
-// import card from './card/src/index.vue';
-// import demo1 from './demo1/src/index.vue';
-// import header1 from './header1/src/index.vue';
+// import demo from './demo/src/Index.vue';
+// import card from './card/src/Index.vue';
+// import demo1 from './demo1/src/Index.vue';
+// import header1 from './header1/src/Index.vue';
 
 // const comArr = [demo, card, demo1, header1];
 

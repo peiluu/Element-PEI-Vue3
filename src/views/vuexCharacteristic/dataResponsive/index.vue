@@ -26,8 +26,8 @@
 <!-- eslint-disable no-unused-vars -->
 <!-- eslint-disable vue/no-unused-components -->
 <script>
-import objectResponsive from './object/index.vue'
-import arrayResponsive from './array/index.vue'
+import objectResponsive from './object/Index.vue'
+import arrayResponsive from './array/Index.vue'
 import classStudy from './classStudy.vue'
 
 export default {
@@ -79,12 +79,12 @@ export default {
 			Object.defineProperty(data, key, {
 				enumerable: true, // 默认值都是false
 				configurable: true,
-				// 数据劫持, 
+				// 数据劫持,
 				get() {    // 闭包内层
 					console.log('你在访问obj的width属性');
 					return tempVal;
 				},
-				set(newVal) {    // 闭包内层 
+				set(newVal) {    // 闭包内层
 					console.log('你在改变obj的width属性');
 					if (tempVal === newVal) return
 

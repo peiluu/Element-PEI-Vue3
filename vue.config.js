@@ -32,40 +32,41 @@ const globalSass = (config) => {
   });
 };
 
-export default defineConfig({
+
+module.exports =  defineConfig({
   // resolve: { extensions: [".ts", ".tsx", ".js", ".json"] },
   // 关闭自动lint校验
   lintOnSave: false,
-  css: {
-    loaderOptions: {
-      scss: {
-        // 自动导入定制化样式进行文件覆盖
-        additionalData: `@use "@/styles/elementPlus/element-costom.scss" as *;`,
-        prependData: `@import "@/styles/elementPlus/element-costom.scss";`, // 引入自定义主题样式
-      },
-    },
-  },
-  plugins: [
-    ElementPlus({
-      useSource: true,
-    }),
-  ],
+  // css: {
+  //   loaderOptions: {
+  //     scss: {
+  //       // 自动导入定制化样式进行文件覆盖
+  //       additionalData: `@use "@/styles/elementPlus/element-costom.scss" as *;`,
+  //       prependData: `@import "@/styles/elementPlus/element-costom.scss";`, // 引入自定义主题样式
+  //     },
+  //   },
+  // },
+  // plugins: [
+  //   ElementPlus({
+  //     useSource: true,
+  //   }),
+  // ],
   transpileDependencies: true,
-  configureWebpack: {
-    plugins: [
-      AutoImport({
-        // importStyle配置样式引入方式，自动引入修改主题色设置此属性
-        resolvers: [ElementPlusResolver({ importStyle: "sass" })],
-      }),
-      Components({
-        // importStyle配置样式引入方式，自动引入修改主题色设置此属性
-        resolvers: [ElementPlusResolver({ importStyle: "sass" })],
-      }),
-      // ElementPlus({
-      //   useSource: true,
-      // }),
-    ],
-  },
+  // configureWebpack: {
+  //   plugins: [
+  //     AutoImport({
+  //       // importStyle配置样式引入方式，自动引入修改主题色设置此属性
+  //       resolvers: [ElementPlusResolver({ importStyle: "sass" })],
+  //     }),
+  //     Components({
+  //       // importStyle配置样式引入方式，自动引入修改主题色设置此属性
+  //       resolvers: [ElementPlusResolver({ importStyle: "sass" })],
+  //     }),
+  //     // ElementPlus({
+  //     //   useSource: true,
+  //     // }),
+  //   ],
+  // },
 
   // 打包出口文件
   // outputDir: 'build',
