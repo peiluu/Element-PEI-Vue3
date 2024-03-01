@@ -24,9 +24,4 @@ export default {
   }
 }
 </script>
-<style scoped="scoped" lang="scss">
-/deep/ .el-sub-menu .el-menu-item:hover {
-//  background: #00b390
-}
-</style>
 

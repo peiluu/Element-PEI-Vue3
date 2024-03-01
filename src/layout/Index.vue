@@ -16,7 +16,7 @@ import  Sidebar from "./components/Sidebar";
 import  AppMain from "./components/AppMain";
 
 export default {
-  name: "layout",
+  name: "Layout",
   components: {
     Navbar,
     Sidebar,
@@ -48,7 +48,8 @@ export default {
 
 <style lang="scss" scoped>
 .app-wrapper {
-  // @include clearfix;
+  display: flex;
+  @include clearfix;
   position: relative;
   height: 100%;
   width: 100%;
@@ -64,6 +65,7 @@ export default {
   z-index: 999;
 }
 .main-container {
+  width: 100%;
   height: 100%;
   transition: margin-left 0.28s;
   margin-left: 210px;

@@ -27,13 +27,13 @@ export function login(data) {
   });
 }
 
-// export function getInfo(token) {
-//   return request({
-//     url: "/user/info",
-//     method: "get",
-//     params: { token },
-//   });
-// }
+export function getInfo(token) {
+  return request({
+    url: "/user/info",
+    method: "get",
+    params: { token },
+  });
+}
 
 // 登出
 export function logout(token) {

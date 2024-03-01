@@ -1,5 +1,5 @@
 import { constantRouterMap } from '@/router/index.js';
-// import Layout from '@/layout/Layout.vue';
+import Layout from '@/layout/Index';
 
 /**
  * 通过meta.role判断是否与当前用户权限匹配
@@ -52,7 +52,7 @@ const permission = {
 				funcMenus.forEach(e => {
 					const curRouter = {};
 					curRouter.path = e.menuUrl;
-					// curRouter.component = Layout;
+					curRouter.component = Layout;
 					curRouter.name = e.menuName;
 					curRouter.meta = { title: e.menuName, icon: e.menuIcon };
 					let routerChildren = [];

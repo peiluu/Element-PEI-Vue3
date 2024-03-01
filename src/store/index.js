@@ -4,7 +4,7 @@ import user from "./modules/user";
 import common from "./modules/common";
 import getters from "./getters";
 import fullScreen from "./modules/fullScreen";
-// import permission from "./modules/permission";
+import permission from "./modules/permission";
 import tagsView from "./modules/tagsView";
 import errorLog from "./modules/errorLog";
 import vuexTest from "./modules/vuexTest";
@@ -15,7 +15,7 @@ const store = createStore({
     user,
     common,
     fullScreen,
-    // permission,
+    permission,
     tagsView,
     errorLog,
     vuexTest,

@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Layout from "@/layout/Layout.vue";
+import Layout from "@/layout/Index";
 
 /***
  * @description 页面路由配置

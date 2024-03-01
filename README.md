@@ -92,6 +92,9 @@
 ## 六、开发注意事项
  ### 1. 配置
  1. Vue3项目可以采用 Vue-cli/Webpack 和 Vite两种配置工具，目前主分支采用Vue-cli/Webpack配置,dev-vite分支已经升级为vite配置
+ 2. Vue-cli配置
+ 3. Vite 配置
+  (1) Vite中不在需要node-sass和sass-loader等依赖搭配使用
 
 
 

@@ -1,4 +1,13 @@
 import { defineConfig } from "vite";
+
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
+import Icons from 'unplugin-icons/vite';
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
+import IconsResolver from 'unplugin-icons/resolver';
+
+
+
 import vue from "@vitejs/plugin-vue";
 import path, { join } from "path";
 // import { resolve } from 'path'
@@ -17,7 +26,6 @@ console.log(path.resolve(__dirname, "./src/"));
 export default defineConfig({
   // root: resolve(__dirname, './'),
   base: "/",
-  plugins: [vue()],
   publicDir: "public",
   cacheDir: ".vite",
   resolve: {
@@ -50,12 +58,43 @@ export default defineConfig({
     modules: true,
     // css预处理器
     preprocessorOptions: {
+
+      // sass: {
+      //   prependData: '@use "@/style/elementPlus/element-costom.scss" as *;'
+      // },
       scss: {
         // 定义全局的scss变量  // 给导入的路径最后加上 ;
-        additionalData: '@import "@/styles/mixin.sass";'
+        additionalData: '@import "@/styles/mixin.scss";',
       },
     },
   },
+  plugins: [
+    AutoImport({
+      resolvers: [
+        ElementPlusResolver({
+          importStyle: "sass",
+        }),
+        IconsResolver({
+          prefix: "Icon",
+        }),
+      ],
+      // dts: path.resolve(pathSrc, "auto-imports.d.ts"),
+    }),
+    Components({
+      resolvers: [
+        IconsResolver({
+          enabledCollections: ["ep"],
+        }),
+        ElementPlusResolver({
+          importStyle: "scss",
+        }),
+      ],
+    }),
+    Icons({
+      autoInstall: true,
+    }),
+    vue(),
+  ],
   server: {
     host: "localhost",
     port: 8000,
