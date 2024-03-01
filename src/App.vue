@@ -1,29 +1,18 @@
 <template>
   <div id="app">
-    <!-- <el-config-provider :locale="zhCn">
-      <router-view v-slot="{ Component }" class="app-router-view">
-        <transition>
-          <component :is="Component" />
-        </transition>
-      </router-view>
-    </el-config-provider> -->
-    <router-view v-slot="{ Component }" class="app-router-view">
-      <!-- <transition> -->
-        <component :is="Component" />
-      <!-- </transition> -->
+    <router-view class="app-router-view">
     </router-view>
-
   </div>
 </template>
-<script lang="ts">
+<script>
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
+// import HelloWorld from './components/HelloWorld.vue';
 
-@Options({
-  components: {
-    HelloWorld,
-  },
-})
+// @Options({
+//   components: {
+//     HelloWorld,
+//   },
+// })
 export default class App extends Vue { }
 </script>
 

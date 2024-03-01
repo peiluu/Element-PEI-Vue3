@@ -1,0 +1,88 @@
+{
+  "hash": "97501313",
+  "configHash": "8431368c",
+  "lockfileHash": "b252a6f1",
+  "browserHash": "72be549b",
+  "optimized": {
+    "vue": {
+      "src": "../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "b17f0653",
+      "needsInterop": false
+    },
+    "vue-i18n": {
+      "src": "../../node_modules/vue-i18n/dist/vue-i18n.mjs",
+      "file": "vue-i18n.js",
+      "fileHash": "f6218f4f",
+      "needsInterop": false
+    },
+    "element-plus": {
+      "src": "../../node_modules/element-plus/es/index.mjs",
+      "file": "element-plus.js",
+      "fileHash": "b8dd502b",
+      "needsInterop": false
+    },
+    "@element-plus/icons-vue": {
+      "src": "../../node_modules/@element-plus/icons-vue/dist/index.js",
+      "file": "@element-plus_icons-vue.js",
+      "fileHash": "f358a0b8",
+      "needsInterop": false
+    },
+    "element-pei-vue3": {
+      "src": "../../node_modules/element-pei-vue3/componentsdist/index.umd.js",
+      "file": "element-pei-vue3.js",
+      "fileHash": "196a4ae4",
+      "needsInterop": true
+    },
+    "vuex": {
+      "src": "../../node_modules/vuex/dist/vuex.esm-bundler.js",
+      "file": "vuex.js",
+      "fileHash": "e2314928",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "src": "../../node_modules/vue-router/dist/vue-router.mjs",
+      "file": "vue-router.js",
+      "fileHash": "96a73921",
+      "needsInterop": false
+    },
+    "js-cookie": {
+      "src": "../../node_modules/js-cookie/dist/js.cookie.mjs",
+      "file": "js-cookie.js",
+      "fileHash": "46b7c388",
+      "needsInterop": false
+    },
+    "query-string": {
+      "src": "../../node_modules/query-string/index.js",
+      "file": "query-string.js",
+      "fileHash": "437af61c",
+      "needsInterop": false
+    },
+    "moment": {
+      "src": "../../node_modules/moment/dist/moment.js",
+      "file": "moment.js",
+      "fileHash": "98d861ac",
+      "needsInterop": false
+    },
+    "vue-class-component": {
+      "src": "../../node_modules/vue-class-component/dist/vue-class-component.esm-bundler.js",
+      "file": "vue-class-component.js",
+      "fileHash": "cbff6020",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-XRRSFYXA": {
+      "file": "chunk-XRRSFYXA.js"
+    },
+    "chunk-AYVSL3LM": {
+      "file": "chunk-AYVSL3LM.js"
+    },
+    "chunk-5RUP7MCR": {
+      "file": "chunk-5RUP7MCR.js"
+    },
+    "chunk-3EJPJMEH": {
+      "file": "chunk-3EJPJMEH.js"
+    }
+  }
+}

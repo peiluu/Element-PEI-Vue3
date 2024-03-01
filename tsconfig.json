@@ -32,6 +32,7 @@
     "src/main.js",
     "shims-vue.d.ts",
     "src/hooks/useMousePosition.js"
-  ],
-  "exclude": ["node_modules"]
+, "src/main.ts"  ],
+  "exclude": ["node_modules"],
+
 }

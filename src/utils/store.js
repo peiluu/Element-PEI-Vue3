@@ -39,7 +39,6 @@ export const getStore = (params) => {
   } else if (obj.dataType === 'number') {
     content = Number(obj.content)
   } else if (obj.dataType === 'boolean') {
-    /* eslint-disable */
     content = eval(obj.content)
   } else if (obj.dataType === 'object') {
     content = obj.content

@@ -7,8 +7,8 @@ import "element-plus/dist/index.css";
 import * as ElIcons from "@element-plus/icons-vue";
 
 // 绝对路径引入
-// import "@/permission"; // 权限控制
-import "@/styles/index.scss"; // global css
+// import "~/style/public.scss"; // 权限控制
+// import "~/style/public.scss"; // global css
 import router from "@/router";
 import store from "@/store";
 
@@ -20,7 +20,7 @@ import ElementPeiVue3 from 'element-pei-vue3';
 import 'element-pei-vue3/componentsdist/css/index.css';
 
 // 相对路径引入
-import '@/styles/elementPlus/element-costom.scss';
+// import '@/styles/elementPlus/e@/layout/Layoutlement-costom.scss';
 // import '@/styles/elementPlus/dark-css-vars.scss';
 
 import App from "./App.vue";

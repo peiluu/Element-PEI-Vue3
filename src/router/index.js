@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Layout from "@/layout/Layout";
+import Layout from "@/layout/Layout.vue";
 
 /***
  * @description 页面路由配置
@@ -13,13 +13,13 @@ export const constantRouterMap = [
   },
   {
     path: "/login",
-    component: () => import("@/views/login/Index"),
+    component: () => import("@/views/login/Index.vue"),
     hidden: true,
     meta: { title: "登录" },
   },
   {
     path: "/register",
-    component: () => import("@/views/login/register/Index"),
+    component: () => import("@/views/login/register/Index.vue"),
     meta: { title: "注册" },
     hidden: true,
   },
@@ -31,7 +31,7 @@ export const constantRouterMap = [
     children: [
       {
         path: "home",
-        component: () => import("@/views/home/Index"),
+        component: () => import("@/views/home/Index.vue"),
         meta: { title: "首页", icon: "home" },
       },
     ],
@@ -112,37 +112,37 @@ export const constantRouterMap = [
     children: [
       {
         path: "dataResponsive",
-        component: () => import("@/views/vuexCharacteristic/dataResponsive/Index"),
+        component: () => import("@/views/vuexCharacteristic/dataResponsive/Index.vue"),
         meta: { title: "数据响应式" },
       },
       {
         path: "defineproperty",
-        component: () => import("@/views/vuexCharacteristic/defineproperty/Index"),
+        component: () => import("@/views/vuexCharacteristic/defineproperty/Index.vue"),
         meta: { title: "数据代理" },
       },
       {
         path: "vuerouter",
-        component: () => import("@/views/vuexCharacteristic/vuerouter/Index"),
+        component: () => import("@/views/vuexCharacteristic/vuerouter/Index.vue"),
         meta: { title: "vuerouter" },
       },
       {
         path: "vuex",
-        component: () => import("@/views/vuexCharacteristic/vuex/Index"),
+        component: () => import("@/views/vuexCharacteristic/vuex/Index.vue"),
         meta: { title: "vuex" },
       },
       {
         path: "vuecomponent",
-        component: () => import("@/views/vuexCharacteristic/vuecomponent/Index"),
+        component: () => import("@/views/vuexCharacteristic/vuecomponent/Index.vue"),
         meta: { title: "vuecomponent" },
       },
       {
         path: "axiosRequest",
-        component: () => import("@/views/vuexCharacteristic/axiosRequest/Index"),
+        component: () => import("@/views/vuexCharacteristic/axiosRequest/Index.vue"),
         meta: { title: "axios请求" },
       },
       {
         path: "vue3",
-        component: () => import("@/views/vuexCharacteristic/vue3/Index"),
+        component: () => import("@/views/vuexCharacteristic/vue3/Index.vue"),
         meta: { title: "Vue3" },
       },
     ],
@@ -156,17 +156,17 @@ export const constantRouterMap = [
     children: [
       {
         path: "basic",
-        component: () => import("@/views/ES6/Index"),
+        component: () => import("@/views/ES6/Index.vue"),
         meta: { title: "ES6 基础" },
       },
       {
         path: "generator",
-        component: () => import("@/views/ES6/generator/Index"),
+        component: () => import("@/views/ES6/generator/Index.vue"),
         meta: { title: "generator" },
       },
       {
         path: "observer",
-        component: () => import("@/views/ES6/observer/Index"),
+        component: () => import("@/views/ES6/observer/Index.vue"),
         meta: { title: "observer" },
       },
     ],
@@ -184,7 +184,7 @@ export const constantRouterMap = [
       },
       // {
       //   path: "basicType",
-      //   component: () => import("@/views/typeScript/basicType/Index"),
+      //   component: () => import("@/views/typeScript/basicType/Index.vue"),
       //   meta: { title: "类型断言" },
       // },
     ],
@@ -197,7 +197,7 @@ export const constantRouterMap = [
     children: [
       {
         path: "hooks",
-        component: () => import("@/views/hooks/Index"),
+        component: () => import("@/views/hooks/Index.vue"),
         meta: { title: "Hooks钩子" },
       },
       {
@@ -337,7 +337,7 @@ export const constantRouterMap = [
     children: [
       {
         path: "quarterDatePicker",
-        component: () => import("@/views/tryComponentLibrary/Index"),
+        component: () => import("@/views/tryComponentLibrary/Index.vue"),
         meta: { title: "试用组件库" },
       },
       // },

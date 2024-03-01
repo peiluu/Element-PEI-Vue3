@@ -48,7 +48,7 @@ export default {
 
 <style lang="scss" scoped>
 .app-wrapper {
-  @include clearfix;
+  // @include clearfix;
   position: relative;
   height: 100%;
   width: 100%;

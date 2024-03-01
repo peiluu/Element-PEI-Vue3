@@ -83,11 +83,15 @@
   test: 测试用例，包括单元测试、集成测试等
   chore: 改变构建流程、或者增加依赖库、工具等
   revert: 回滚版本
+  merge: 合并冲突
 
  ### scope 表示此次修改作用的范围,这个不同的项目不一样
  ### subject 这个commit的描述
 
 
+## 六、开发注意事项
+ ### 1. 配置
+ 1. Vue3项目可以采用 Vue-cli/Webpack 和 Vite两种配置工具，目前主分支采用Vue-cli/Webpack配置,dev-vite分支已经升级为vite配置
 
 
 
