@@ -1,10 +1,13 @@
 <template>
-  <div id="app">
-    <keep-alive>
-      <router-view />
+  <router-view v-slot="{ Component, route }">
+    <keep-alive v-if="route.meta.keepAlive">
+      <component :is="Component" />
     </keep-alive>
-  </div>
+    <component v-else :is="Component" />
+  </router-view>
 </template>
+
+
 <script>
 import { Options, Vue } from 'vue-class-component';
 // import HelloWorld from './components/HelloWorld.vue';
@@ -22,7 +25,6 @@ export default class App extends Vue { }
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   color: #2c3e50;
 
 }

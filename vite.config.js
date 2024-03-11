@@ -6,8 +6,6 @@ import Icons from 'unplugin-icons/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 import IconsResolver from 'unplugin-icons/resolver';
 
-
-
 import vue from "@vitejs/plugin-vue";
 import path, { join } from "path";
 // import { resolve } from 'path'
@@ -57,6 +55,11 @@ export default defineConfig({
   css: {
     modules: true,
     // css预处理器
+    loaderOptions: {
+      sass: {
+        prependData: '@use "@/assets/style/element/index.scss" as *;'
+      }
+    },
     preprocessorOptions: {
 
       // sass: {
@@ -64,7 +67,8 @@ export default defineConfig({
       // },
       scss: {
         // 定义全局的scss变量  // 给导入的路径最后加上 ;
-        additionalData: '@import "@/styles/mixin.scss";',
+        additionalData: '@use "@/styles/mixin.scss" as *;'
+
       },
     },
   },
