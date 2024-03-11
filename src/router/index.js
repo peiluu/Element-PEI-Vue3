@@ -112,17 +112,20 @@ export const constantRouterMap = [
     children: [
       {
         path: "dataResponsive",
-        component: () => import("@/views/vuexCharacteristic/dataResponsive/Index.vue"),
+        component: () =>
+          import("@/views/vuexCharacteristic/dataResponsive/Index.vue"),
         meta: { title: "数据响应式" },
       },
       {
         path: "defineproperty",
-        component: () => import("@/views/vuexCharacteristic/defineproperty/Index.vue"),
+        component: () =>
+          import("@/views/vuexCharacteristic/defineproperty/Index.vue"),
         meta: { title: "数据代理" },
       },
       {
         path: "vuerouter",
-        component: () => import("@/views/vuexCharacteristic/vuerouter/Index.vue"),
+        component: () =>
+          import("@/views/vuexCharacteristic/vuerouter/Index.vue"),
         meta: { title: "vuerouter" },
       },
       {
@@ -132,18 +135,26 @@ export const constantRouterMap = [
       },
       {
         path: "vuecomponent",
-        component: () => import("@/views/vuexCharacteristic/vuecomponent/Index.vue"),
+        component: () =>
+          import("@/views/vuexCharacteristic/vuecomponent/Index.vue"),
         meta: { title: "vuecomponent" },
       },
       {
         path: "axiosRequest",
-        component: () => import("@/views/vuexCharacteristic/axiosRequest/Index.vue"),
+        component: () =>
+          import("@/views/vuexCharacteristic/axiosRequest/Index.vue"),
         meta: { title: "axios请求" },
       },
       {
         path: "vue3",
         component: () => import("@/views/vuexCharacteristic/vue3/Index.vue"),
         meta: { title: "Vue3" },
+      },
+      {
+        path: "VueModel",
+        component: () =>
+          import("@/views/vuexCharacteristic/vueModel/Index.vue"),
+        meta: { title: "自定义组件model穿透" },
       },
     ],
   },
@@ -327,7 +338,6 @@ export const constantRouterMap = [
         component: () => import("@/views/questionDesign/Design_20240118"),
         meta: { title: "Design_20240118" },
       },
-
     ],
   },
   {

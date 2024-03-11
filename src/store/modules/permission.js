@@ -82,5 +82,5 @@ const permission = {
     },
   },
 };
-console.log(permission);
+// console.log(permission);
 export default permission;

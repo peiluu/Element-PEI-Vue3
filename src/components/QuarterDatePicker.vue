@@ -1,57 +1,53 @@
 <template>
   <div class="com-quarter-dateDicker">
-    <!-- <div class="quarter-left">
-      <el-radio v-model="radioType" label="quarter">季度</el-radio>
-      <el-radio v-model="radioType" label="month">月度</el-radio>
-    </div> -->
-    <template v-if="pickerType === '季'">
-      <mark style="position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,0);z-index:999;" v-show="showQuarter" @click.stop="showQuarter = false"></mark>
-      <div class="quarter-input-box">
-        <el-input :disabled="dateDisabled" placeholder="请选择" v-model="form.formatQuarterValue" style="width:100%;" class="elWidth" @focus="showQuarter = true">
-          <i slot="prefix" class="el-input__icon el-icon-date"></i>
-        </el-input>
-        <i class="el-input__icon el-icon-circle-close" v-if="!dateDisabled" @click="clearDate"></i>
-      </div>
+    <mark style="position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,0);z-index:999;" v-show="showQuarter" @click.stop="showQuarter = false"></mark>
+    <div class="quarter-input-box">
+      <el-input :disabled="dateDisabled" placeholder="请选择" style="width:100%;" :value="modelValue" @focus="showQuarter = true">
+        <i slot="prefix" class="el-input__icon el-icon-date"></i>
+      </el-input>
+      <i class="el-input__icon el-icon-circle-close" v-if="!dateDisabled" @click="clearDate"></i>
+    </div>
 
-      <el-card class="box-card" v-show="showQuarter" style="width:100%">
-        <div slot="header" class="clearfix" style="text-align:center;padding:0">
-          <button type="button" aria-label="前一年" :class="{ notallow: preDateDisabled || currentDateDisabled }" class="el-picker-panel__icon-btn el-date-picker__prev-btn el-icon-d-arrow-left" @click="prev"></button>
-          <span role="button" class="el-date-picker__header-label">{{ year }}年</span>
-          <button type="button" aria-label="后一年" @click="next" :class="{ notallow: nextDateDisabled }" class="el-picker-panel__icon-btn el-date-picker__next-btn el-icon-d-arrow-right"></button>
-        </div>
-        <div class="text item" style="text-align:center;">
-          <el-button type="text" size="medium" :class="{ notallow: getDateDisabled(1) }" style="width:40%;color: #606266;float:left;" @click="selectQuarter(0)">第一季度</el-button>
-          <el-button type="text" size="medium" :class="{ notallow: getDateDisabled(2) }" style="float:right;width:40%;color: #606266;" @click="selectQuarter(1)">第二季度</el-button>
-        </div>
-        <div class="text item" style="text-align:center;">
-          <el-button type="text" size="medium" :class="{ notallow: getDateDisabled(3) }" style="width:40%;color: #606266;float:left;" @click="selectQuarter(2)">第三季度</el-button>
-          <el-button type="text" size="medium" :class="{ notallow: getDateDisabled(4) }" style="float:right;width:40%;color: #606266;" @click="selectQuarter(3)">第四季度</el-button>
-        </div>
-      </el-card>
-    </template>
-    <template v-else>
-      <el-date-picker :disabled="dateDisabled" :clearable="clearable" value-format="yyyyMM" v-model="form.monthValue" type="month" placeholder="请选择" @change="selectMonth" :picker-options="getPickerOptions()" />
-    </template>
+    <el-card class="box-card" v-show="showQuarter" style="width:100%">
+      <div slot="header" class="clearfix" style="text-align:center;padding:0">
+        <button type="button" aria-label="前一年" :class="{ notallow: preDateDisabled || currentDateDisabled }" class="el-picker-panel__icon-btn el-date-picker__prev-btn el-icon-d-arrow-left" @click="prev"></button>
+        <span role="button" class="el-date-picker__header-label">{{ year }}年</span>
+        <button type="button" aria-label="后一年" @click="next" :class="{ notallow: nextDateDisabled }" class="el-picker-panel__icon-btn el-date-picker__next-btn el-icon-d-arrow-right"></button>
+      </div>
+      <div class="text item" style="text-align:center;">
+        <el-button type="text" size="medium" :class="{ notallow: getDateDisabled(1) }" style="width:40%;color: #606266;float:left;" @click="selectQuarter(0)">第一季度</el-button>
+        <el-button type="text" size="medium" :class="{ notallow: getDateDisabled(2) }" style="float:right;width:40%;color: #606266;" @click="selectQuarter(1)">第二季度</el-button>
+      </div>
+      <div class="text item" style="text-align:center;">
+        <el-button type="text" size="medium" :class="{ notallow: getDateDisabled(3) }" style="width:40%;color: #606266;float:left;" @click="selectQuarter(2)">第三季度</el-button>
+        <el-button type="text" size="medium" :class="{ notallow: getDateDisabled(4) }" style="float:right;width:40%;color: #606266;" @click="selectQuarter(3)">第四季度</el-button>
+      </div>
+    </el-card>
   </div>
+
 </template>
 <script>
 import { getCurrentDate, getCurrentSsq, InitialTime } from "@/utils/utils";
 
 export default {
   name: 'QuarterDatePicker',
+  model: {
+    prop: 'modelValue',
+    event: 'change'
+  },
+  // props: {
+  //   val: String,
+  //   type: String,
+  // },
   props: {
-    valueArr: {
-      default: () => {
-        return ['01-03', '04-06', '07-09', '10-12'];
-      },
-      type: Array,
-    },
-    // 限制的时间
-    limitTime: {
+    modelValue: {
       type: String,
-      default: "2023",
-      require: true,
+      default: "",
     },
+    editForm: {
+
+    },
+
     propsParam: {
       type: String,
       default: "",
@@ -99,6 +95,7 @@ export default {
     return {
       showQuarter: false,
       quarter: "",
+      valueArr: ['01-03', '04-06', '07-09', '10-12'],
       year: new Date().getFullYear(),
       form: {
         quarterValue: '',
@@ -121,6 +118,8 @@ export default {
   computed: {
   },
   mounted() {
+    console.log(this.modelValue)
+    console.log(this.props)
   },
   activated() {
     // this.intiForm();
@@ -234,6 +233,8 @@ export default {
       this.form.formatQuarterValue = `${this.year}年${this.quarter}季度`;
       this.form.quarterValue = `${this.year}${InitialTime(this.quarter)}`;
       this.$emit("getQuarterPickerFrom", this.propsParam, this.form.quarterValue);
+      this.$emit('update:modelValue', this.form.quarterValue)
+
     },
     selectMonth(value) {
       this.$emit("getQuarterPickerFrom", this.propsParam, value);
@@ -246,6 +247,9 @@ export default {
     clearDate() {
       this.form = {}
       this.$emit("getQuarterPickerFrom", this.propsParam, '');
+    },
+    click() {
+      console.log(this)
     },
     reset() {
       // if (this.isInitDefault) {
