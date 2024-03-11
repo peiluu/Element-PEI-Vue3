@@ -56,13 +56,10 @@
     </div>
     <el-dialog :title="`${this.editForm.id ? '编辑' : '新增'}`" v-model="dialogVisible" width="60%" :before-close="handleClose">
       <el-form :inline="true" :model="editForm" ref="editForm" :rules="rules">
-
         <el-form-item label="税款所属期" prop="ssq">
           <QuarterDatePicker :key="`${sdstbzq}_${dialogVisible}`" v-model="editForm.ssq" :editForm="editForm" propsParam="ssq" :disabled="!editForm.nsrsbh" :preDateDisabled="preDateDisabled"
             :currentDateDisabled="currentDateDisabled" ref="quarterDatePicker" />
         </el-form-item>
-
-
         <el-form-item label="事项内容 金额" prop="fbsxz">
           <el-input v-model="editForm.fbsxz" placeholder="请输入" />
         </el-form-item>
