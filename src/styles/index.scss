@@ -2,8 +2,8 @@
 @import "./reset.scss";
 @import "./element-plus.scss";
 @import "./sidebar.scss";
-@import './custom.scss';
-@import './customTable.scss';
+@import "./custom.scss";
+@import "./customTable.scss";
 @import "./transition.scss";
 
 html {
@@ -54,7 +54,7 @@ body {
   width: 100%;
   height: calc(100vh - 50px);
   padding: 8px;
-  background: #e8ebed;;
+  background: #e8ebed;
   overflow-y: auto;
 }
 
@@ -69,19 +69,15 @@ body {
   }
 }
 
-
-
 .text-white {
   color: #fff;
 }
-
 
 .crumbs {
   margin-bottom: 20px;
 }
 
 /*VueEditor */
-
 .plugins-tips {
   padding: 20px 10px;
   margin-bottom: 20px;
@@ -102,16 +98,62 @@ body {
 }
 .main-content {
   height: 100%;
-  padding: 16px 8px;
+  padding: 16px 8px 8px;
   overflow-y: scroll;
   border-radius: 4px;
   box-shadow: 0 2px 12px 0 #f0f2f5;
   background: #ffffff;
-
 }
-.content-title{
+.content-title {
   font-size: 18px;
   margin-bottom: 24px;
 }
+.el-form-item {
+  margin-right: 10px !important;
+  .el-form-item__label {
+    font-weight: normal;
+  }
+  .el-form-item__content {
+    .el-select,
+    .el-date-editor,
+    .el-cascader,
+    .el-input {
+      width: 100%;
+    }
+  }
+}
+ .edit-panel-dialog {
+  .form-item-tips {
+    margin-left: -12px;
+    font-size: 12px;
+    color: #606266;
+  }
 
-/*BaseForm*/
+  .el-dialog__body {
+    padding: 20px 20px 0 !important;
+    .el-form-item {
+      width: calc(50% - 10px);
+      margin-bottom: 16px;
+
+      .el-form-item__label {
+        width: 200px;
+      }
+
+      .el-form-item__content {
+        width: calc(100% - 200px);
+      }
+    }
+  }
+  .form-item-line {
+    .el-form-item {
+      width: calc(100% - 10px);
+      margin-bottom: 16px;
+      .el-form-item__label {
+        width: 300px;
+      }
+      .el-form-item__content {
+        width: calc(100% - 500px);
+      }
+    }
+  }
+}

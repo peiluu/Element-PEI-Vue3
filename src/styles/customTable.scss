@@ -137,7 +137,7 @@
   display: flex;
   justify-content: flex-end;
   font-size: 12px;
- .el-pagination {
+  .el-pagination {
     display: flex;
     align-items: center;
     color: red;
@@ -149,7 +149,7 @@
     }
   }
 
-   .el-pager li {
+  .el-pager li {
     min-width: 22px;
     height: 24px;
     line-height: 24px;
@@ -168,20 +168,22 @@
     }
   }
 }
- .custom-query-form {
-  padding-top: 12px;
+
+.custom-query-form {
   display: flex;
   justify-content: space-between;
 
   .el-form {
-    width: calc(100% - 170px);
+    // width: calc(100% - 170px);
+    flex: 1;
   }
   .search-btns {
     margin-bottom: 4px;
   }
 
   .el-form-item {
-    width: calc(33.3% - 20px);
+    width: calc(33.3% - 10px);
+    border: 1px solid red;
     margin-bottom: 4px !important;
 
     .el-form-item__label {
@@ -192,13 +194,6 @@
 
     .el-form-item__content {
       width: calc(100% - 120px);
-
-      .el-select,
-      .el-date-editor,
-      .el-cascader,
-      .el-input {
-        width: 100% !important;
-      }
     }
   }
 

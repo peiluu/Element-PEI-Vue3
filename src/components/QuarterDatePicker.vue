@@ -281,6 +281,7 @@ export default {
 }
 
 .com-quarter-dateDicker {
+  width: 100%;
   display: flex;
   align-items: center;
   /*  width: 100%; */

@@ -42,7 +42,7 @@
         <el-table-column label="税款所属期" prop="ssq" align="center" min-width="100">
         </el-table-column>
         <el-table-column label="本期分摊比例" prop="ftbl" align='center' min-width="130" />
-        <el-table-column label="本期分摊应补（退）所得税额" prop="ftybtse" align="right" min-width="170">
+        <el-table-column label="本期分摊应补（退）所得税额" prop="ftybtse" align="right" min-width="190">
         </el-table-column>
         <el-table-column label="最后修改时间" prop="updatetime" align="center" min-width="100">
           <!-- <template slot-scope="{row}">{{ dateFormat('YYYY-mm-dd', row.updatetime) }} </template> -->
@@ -54,7 +54,7 @@
         layout="total, sizes, prev, pager, next, jumper" :total="pagination.total">
       </el-pagination>
     </div>
-    <el-dialog :title="`${this.editForm.id ? '编辑' : '新增'}`" v-model="dialogVisible" width="60%" :before-close="handleClose">
+    <el-dialog :title="`${this.editForm.id ? '编辑' : '新增'}`" v-model="dialogVisible" width="60%" :before-close="handleClose" custom-class="edit-panel-dialog">
       <el-form :inline="true" :model="editForm" ref="editForm" :rules="rules">
         <el-form-item label="税款所属期" prop="ssq">
           <QuarterDatePicker :key="`${sdstbzq}_${dialogVisible}`" v-model="editForm.ssq" :editForm="editForm" propsParam="ssq" :disabled="!editForm.nsrsbh" :preDateDisabled="preDateDisabled"
@@ -68,10 +68,13 @@
           <el-input v-model="editForm.bz" maxlength="100" placeholder="请输入" />
         </el-form-item>
       </el-form>
-      <span slot="footer" class="dialog-footer">
-        <el-button @click="handleClose">取 消</el-button>
-        <el-button type="primary" @click="saveData">保 存</el-button>
-      </span>
+      <template #footer>
+        <div slot="footer" class="dialog-footer">
+          <el-button @click="handleClose">取 消</el-button>
+          <el-button type="primary" @click="saveData">保 存</el-button>
+        </div>
+      </template>
+
     </el-dialog>
   </div>
 </template>
@@ -102,7 +105,7 @@ export default {
         showQuickJumper: true,
         showTotal: (total) => `共${total}条`,
       },
-      editForm: {  },
+      editForm: {},
       dialogVisible: false,
 
       pickerOptions: {
@@ -287,15 +290,11 @@ export default {
     // dateFormat,
   },
   computed: {
-    contentHeight() {
-      return window.innerHeight - 132;
-    },
+
     height() {
-      return window.innerHeight - 280;
+      return window.innerHeight - 250;
     },
-    ssqReturnType() {
-      return this.$refs.ledgerForm.zzstbzq
-    },
+
     canUpdate() {
       return this.form.zjgsbh && this.form.ssq && !this.querySbStatus
     }

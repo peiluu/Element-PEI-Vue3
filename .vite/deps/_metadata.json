@@ -2,144 +2,150 @@
   "hash": "62c56d39",
   "configHash": "01b159ec",
   "lockfileHash": "d55df3b1",
-  "browserHash": "38c50908",
+  "browserHash": "ae8fc11e",
   "optimized": {
     "vue": {
       "src": "../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "5728b132",
+      "fileHash": "7ea70797",
       "needsInterop": false
     },
     "vue-i18n": {
       "src": "../../node_modules/vue-i18n/dist/vue-i18n.mjs",
       "file": "vue-i18n.js",
-      "fileHash": "9fa4f38c",
+      "fileHash": "9b3e03d1",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "c4327417",
+      "fileHash": "a5f9c3ce",
       "needsInterop": false
     },
     "@element-plus/icons-vue": {
       "src": "../../node_modules/@element-plus/icons-vue/dist/index.js",
       "file": "@element-plus_icons-vue.js",
-      "fileHash": "a789aa49",
+      "fileHash": "55c6d586",
       "needsInterop": false
     },
     "element-pei-vue3": {
       "src": "../../node_modules/element-pei-vue3/componentsdist/index.umd.js",
       "file": "element-pei-vue3.js",
-      "fileHash": "6cdb95ef",
+      "fileHash": "529eaad4",
       "needsInterop": true
     },
     "vue-class-component": {
       "src": "../../node_modules/vue-class-component/dist/vue-class-component.esm-bundler.js",
       "file": "vue-class-component.js",
-      "fileHash": "64dc8f92",
+      "fileHash": "c7d04933",
       "needsInterop": false
     },
     "vue-router": {
       "src": "../../node_modules/vue-router/dist/vue-router.mjs",
       "file": "vue-router.js",
-      "fileHash": "e37099d5",
+      "fileHash": "948229de",
       "needsInterop": false
     },
     "vuex": {
       "src": "../../node_modules/vuex/dist/vuex.esm-bundler.js",
       "file": "vuex.js",
-      "fileHash": "d65203fa",
+      "fileHash": "469f5876",
       "needsInterop": false
     },
     "js-cookie": {
       "src": "../../node_modules/js-cookie/dist/js.cookie.mjs",
       "file": "js-cookie.js",
-      "fileHash": "b07b912a",
+      "fileHash": "4632f32e",
       "needsInterop": false
     },
     "element-plus/es": {
       "src": "../../node_modules/element-plus/es/index.mjs",
       "file": "element-plus_es.js",
-      "fileHash": "7c63e6ab",
+      "fileHash": "6ccf226a",
       "needsInterop": false
     },
     "element-plus/es/components/base/style/index": {
       "src": "../../node_modules/element-plus/es/components/base/style/index.mjs",
       "file": "element-plus_es_components_base_style_index.js",
-      "fileHash": "642b7a58",
+      "fileHash": "e429edb7",
       "needsInterop": false
     },
     "element-plus/es/components/menu/style/index": {
       "src": "../../node_modules/element-plus/es/components/menu/style/index.mjs",
       "file": "element-plus_es_components_menu_style_index.js",
-      "fileHash": "7c3f8bcf",
+      "fileHash": "a4014b57",
       "needsInterop": false
     },
     "element-plus/es/components/button/style/index": {
       "src": "../../node_modules/element-plus/es/components/button/style/index.mjs",
       "file": "element-plus_es_components_button_style_index.js",
-      "fileHash": "e892b517",
+      "fileHash": "f6456023",
       "needsInterop": false
     },
     "element-plus/es/components/icon/style/index": {
       "src": "../../node_modules/element-plus/es/components/icon/style/index.mjs",
       "file": "element-plus_es_components_icon_style_index.js",
-      "fileHash": "55ccd8a9",
+      "fileHash": "0b721a30",
       "needsInterop": false
     },
     "element-plus/es/components/scrollbar/style/index": {
       "src": "../../node_modules/element-plus/es/components/scrollbar/style/index.mjs",
       "file": "element-plus_es_components_scrollbar_style_index.js",
-      "fileHash": "5ffb9700",
+      "fileHash": "12bc5fd2",
       "needsInterop": false
     },
     "element-plus/es/components/breadcrumb/style/index": {
       "src": "../../node_modules/element-plus/es/components/breadcrumb/style/index.mjs",
       "file": "element-plus_es_components_breadcrumb_style_index.js",
-      "fileHash": "138ec43e",
+      "fileHash": "8a55056d",
       "needsInterop": false
     },
     "element-plus/es/components/breadcrumb-item/style/index": {
       "src": "../../node_modules/element-plus/es/components/breadcrumb-item/style/index.mjs",
       "file": "element-plus_es_components_breadcrumb-item_style_index.js",
-      "fileHash": "8163ece7",
+      "fileHash": "53d1a12b",
       "needsInterop": false
     },
     "element-plus/es/components/sub-menu/style/index": {
       "src": "../../node_modules/element-plus/es/components/sub-menu/style/index.mjs",
       "file": "element-plus_es_components_sub-menu_style_index.js",
-      "fileHash": "faa3794d",
+      "fileHash": "00cea5ae",
       "needsInterop": false
     },
     "element-plus/es/components/menu-item/style/index": {
       "src": "../../node_modules/element-plus/es/components/menu-item/style/index.mjs",
       "file": "element-plus_es_components_menu-item_style_index.js",
-      "fileHash": "78cd1c80",
+      "fileHash": "1444ec0f",
       "needsInterop": false
     },
     "query-string": {
       "src": "../../node_modules/query-string/index.js",
       "file": "query-string.js",
-      "fileHash": "b9669c8e",
+      "fileHash": "204441d7",
       "needsInterop": false
     },
     "moment": {
       "src": "../../node_modules/moment/dist/moment.js",
       "file": "moment.js",
-      "fileHash": "4ca7c31a",
+      "fileHash": "1c25fed7",
       "needsInterop": false
+    },
+    "element-plus/lib/locale/lang/zh-cn": {
+      "src": "../../node_modules/element-plus/lib/locale/lang/zh-cn.js",
+      "file": "element-plus_lib_locale_lang_zh-cn.js",
+      "fileHash": "6f8e7064",
+      "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-5FH3RXRB": {
-      "file": "chunk-5FH3RXRB.js"
-    },
     "chunk-VH7PW6EM": {
       "file": "chunk-VH7PW6EM.js"
     },
     "chunk-XRRSFYXA": {
       "file": "chunk-XRRSFYXA.js"
+    },
+    "chunk-5FH3RXRB": {
+      "file": "chunk-5FH3RXRB.js"
     },
     "chunk-AYVSL3LM": {
       "file": "chunk-AYVSL3LM.js"

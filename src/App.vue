@@ -1,23 +1,35 @@
 <template>
-  <router-view v-slot="{ Component, route }">
-    <keep-alive v-if="route.meta.keepAlive">
-      <component :is="Component" />
-    </keep-alive>
-    <component v-else :is="Component" />
-  </router-view>
-</template>
+  <el-config-provider :locale="locale">
+    <router-view v-slot="{ Component, route }">
+      <keep-alive v-if="route.meta.keepAlive">
+        <component :is="Component" />
+      </keep-alive>
+      <component v-else :is="Component" />
+    </router-view>
+  </el-config-provider>
+</template>font-weight
 
 
 <script>
 import { Options, Vue } from 'vue-class-component';
-// import HelloWorld from './components/HelloWorld.vue';
+import { ElConfigProvider } from "element-plus";//！！！！！！
+import { defineComponent } from 'vue'
 
-// @Options({
-//   components: {
-//     HelloWorld,
-//   },
-// })
-export default class App extends Vue { }
+import zhCn from "element-plus/lib/locale/lang/zh-cn"
+
+
+
+export default defineComponent({
+  components: {
+    ElConfigProvider,
+  },
+  setup() {
+    return {
+      locale: zhCn,
+    }
+  },
+})
+
 </script>
 
 <style>
