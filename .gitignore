@@ -3,6 +3,7 @@ node_modules
 /dist
 /build
 /docs/.vuepress/dist
+components.d
 # local env files
 .env.local
 .env.*.local
@@ -16,6 +17,8 @@ pnpm-debug.log*
 # Editor directories and files
 .idea
 .vscode
+.temp
+.vite
 *.suo
 *.ntvs*
 *.njsproj

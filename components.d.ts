@@ -26,6 +26,8 @@ declare module 'vue' {
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
+    ElTabPane: typeof import('element-plus/es')['ElTabPane']
+    ElTabs: typeof import('element-plus/es')['ElTabs']
     ErrorLog: typeof import('./src/components/ErrorLog/index.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     LgtBreadcrumb: typeof import('./src/components/lgt-breadcrumb/index.vue')['default']
