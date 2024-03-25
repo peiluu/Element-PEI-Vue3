@@ -21,7 +21,7 @@ import ElementPeiVue3 from 'element-pei-vue3';
 import 'element-pei-vue3/componentsdist/css/index.css';
 
 // 相对路径引入
-// import '@/styles/elementPlus/element-costom.scss';
+import '@/styles/elementPlus/element-costom.scss';
 // import '@/styles/elementPlus/dark-css-vars.scss';
 
 import App from "./App.vue";

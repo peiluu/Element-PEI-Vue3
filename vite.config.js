@@ -62,9 +62,9 @@ export default defineConfig({
     },
     preprocessorOptions: {
 
-      // sass: {
-      //   prependData: '@use "@/style/elementPlus/element-costom.scss" as *;'
-      // },
+      sass: {
+        prependData: '@use "@/style/elementPlus/element-costom.scss" as *;'
+      },
       scss: {
         // 定义全局的scss变量  // 给导入的路径最后加上 ;
         additionalData: '@use "@/styles/mixin.scss" as *;'
@@ -119,7 +119,7 @@ export default defineConfig({
   },
   build: {
     target: "modules",
-    outDir: "results",
+    outDir: "dist",
     assetsDir: "assets",
     assetsInlineLimit: 4096,
     cssCodeSplit: true,

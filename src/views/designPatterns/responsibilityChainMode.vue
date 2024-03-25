@@ -90,7 +90,7 @@ const getData = () => {
 };
 </script>
 <style lang="scss" scoped>
-/deep/ .el-card__body {
+.el-card__body {
   display: flex;
   .el-input {
     width: 200px;
