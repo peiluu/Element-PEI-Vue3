@@ -151,6 +151,11 @@ export const constantRouterMap = [
         meta: { title: "Vue3" },
       },
       {
+        path: "vueBasic",
+        component: () => import("@/views/vuexCharacteristic/vueBasic/Index.vue"),
+        meta: { title: "vueBasic" },
+      },
+      {
         path: "VueModel",
         component: () =>
           import("@/views/vuexCharacteristic/vueModel/Index.vue"),
