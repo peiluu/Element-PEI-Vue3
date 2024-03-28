@@ -25,6 +25,7 @@ import '@/styles/elementPlus/element-costom.scss';
 // import '@/styles/elementPlus/dark-css-vars.scss';
 
 import App from "./App.vue";
+import AppTest1 from "./AppTest.vue";
 import en from './langurage/en';
 import zh from './langurage/zh';
 
@@ -40,7 +41,13 @@ const i18n = createI18n({
   locale: 'en'  // 设置默认语言
 })
 
+// 创建应用
+// 创建多个应用，挂载在不同的节点上
+const AppTest = createApp(AppTest1);
+// AppTest.mount('#apptest')
+
 const app = createApp(App);
+
 // 添加全局对象上的属性和方法，后续在Vue实例里都能直接通过this访问
 // app.config.globalProperties.$cookies = cookies;
 
@@ -48,5 +55,6 @@ const app = createApp(App);
 for (const iconName in ElIcons) {
   app.component(iconName, ElIcons[iconName]);
 }
+
 app.use(router).use(store).use(plugin, { store }).use(ElementPlus).use(ElementPeiVue3).use(i18n).mount("#app");
 // app.use(router).use(store).use(plugin, { store }).use(ElementPlus).mount("#app");

@@ -1,7 +1,6 @@
 <template>
 	<div class="page-vuecomponent">
 		<h4>Vue Components</h4>
-ss
 		<!-- 通过props传递事件，子给父传递数据 -->
 		<message :onCall="onCallBack" />
 		<!-- 通过自定义事件，子给父传递数据 -->
