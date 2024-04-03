@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>发票下载</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <iframe id="pdf-frame" :src="src" style="width: 100%; height: 99vh; border: none;"></iframe>
+  </div>
+  <script>
+    // 将vue挂载到id为home的根元素上
+    var vm = new Vue({
+      el: "#app",
+      data() {
+        return {
+          src: 1,
+        };
+      },
+      mounted() {
+        const id = window.location.search.split('=')[1]
+        const apiUrl = 'http://localhost:8090/getpdf';
+        fetch(apiUrl)
+          .then(response => response.blob())
+          .then(blob => {
+            // 创建一个新的URL指向PDF blob
+            const blobUrl = URL.createObjectURL(blob);
+            // 将iframe的src设置为PDF blob的URL
+            this.src = blobUrl
+            // document.getElementById('pdf-frame').src = blobUrl;
+          });
+      },
+      created() { },
+    });
+  </script>
+</body>
+<style>
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+</style>
+
+</html>

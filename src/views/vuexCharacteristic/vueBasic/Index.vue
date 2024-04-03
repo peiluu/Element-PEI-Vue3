@@ -26,6 +26,7 @@
     <component :is="refInput" />
     <div class="red">css v-bind </div>
     <p :class="$style.red">This should be red</p>
+    <!-- <QuarterDatePicker /> -->
 
 
   </div>

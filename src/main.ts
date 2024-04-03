@@ -28,6 +28,9 @@ import App from "./App.vue";
 import AppTest1 from "./AppTest.vue";
 import en from './langurage/en';
 import zh from './langurage/zh';
+// import QuarterDatePicker from '@/components/QuarterDatePicker';
+
+
 
 // src/main.js
 const messages = {
@@ -55,6 +58,6 @@ const app = createApp(App);
 for (const iconName in ElIcons) {
   app.component(iconName, ElIcons[iconName]);
 }
-
+// app.component('QuarterDatePicker', QuarterDatePicker);
 app.use(router).use(store).use(plugin, { store }).use(ElementPlus).use(ElementPeiVue3).use(i18n).mount("#app");
 // app.use(router).use(store).use(plugin, { store }).use(ElementPlus).mount("#app");

@@ -11,12 +11,13 @@
     "docs:dev": "vuepress dev docs --temp .temp",
     "docs:build": "vuepress build docs",
     "deploy": "bash deploy.sh",
+    "serve": "vite --host",
     "dev": "vite --host",
     "build": "vite build",
     "build:dev": "vite build --mode dev",
     "build:uat": "vite build --mode uat",
     "build:prod": "vite build --mode prod",
-    "serve": "vite preview"
+    "preview": "vite preview"
   },
   "main": "componentsdist/index.umd.js",
   "files": [

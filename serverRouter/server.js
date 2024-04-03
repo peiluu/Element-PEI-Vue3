@@ -1,4 +1,6 @@
-const express = require('express');
+const express = require("express");
+const path = require("path");
+const fs=require("fs");
 const app = express();
 
 app.use(express.static(__dirname + "/dist"));
@@ -44,6 +46,19 @@ app.post("/sendUser", (req, res) => {
     });
   }
 });
+/**
+ * @description 读取pdf，返回一个响应流
+ */
+app.get("/getpdf", (req, res) => {
+  let filePath = path.resolve(__dirname,'./', "100.pdf");
+  let fileStream = fs.createReadStream(filePath);
+  let stat = fs.statSync(filePath);
+  res.setHeader("Content-Length", stat.size);
+  res.setHeader("Content-Type", "application/pdf");
+  res.setHeader("Content-Disposition", "attachment; filename=100.pdf");
+  fileStream.pipe(res);
+});
+
 app.listen(8090, (err) => {
   if (!err) {
     console.log("服务器启动了");

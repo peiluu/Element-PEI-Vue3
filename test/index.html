@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>发票下载</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="app">
+    <iframe id="pdf-frame" src="" style="width: 100%; height: 99vh; border: none;"></iframe>
+    <!-- <button id="btn">请求</button> -->
+  </div>
+  <script>
+    // 假设 'apiUrl' 是提供PDF流的接口URL
+    const id = window.location.search.split('=')[1]
+    const apiUrl = 'http://localhost:8090/getpdf';
+    fetch(apiUrl)
+      .then(response => response.blob())
+      .then(blob => {
+        // 创建一个新的URL指向PDF blob
+        const blobUrl = URL.createObjectURL(blob);
+        // 将iframe的src设置为PDF blob的URL
+        document.getElementById('pdf-frame').src = blobUrl;
+      });
+    // fetch(apiUrl, {
+    //   method: 'post',
+    //   body: JSON.stringify({ id }),
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   }
+    // })
+    //   .then(response => response.blob())
+    //   .then(blob => {
+    //     // 创建一个新的URL指向PDF blob
+    //     const blobUrl = URL.createObjectURL(blob);
+    //     // 将iframe的src设置为PDF blob的URL
+    //     document.getElementById('pdf-frame').src = blobUrl;
+    //   });
+
+    window.onload = () => {
+      var url = "https://mtclq-dev.mideazy.com/mtclq-mtclqback/previewPdf";
+      var paramsobj = { name: 'zs', age: 20 };
+      axios.post(url, { id }).then(function (res) {
+        console.log(res.data);
+      });
+    }
+
+
+  </script>
+</body>
+</html>
