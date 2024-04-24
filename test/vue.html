@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +24,7 @@
       },
       mounted() {
         const id = window.location.search.split('=')[1]
-        const apiUrl = 'http://localhost:8090/getpdf';
+        const apiUrl = `http://localhost:8090/getpdf/${id}`;
         fetch(apiUrl)
           .then(response => response.blob())
           .then(blob => {
