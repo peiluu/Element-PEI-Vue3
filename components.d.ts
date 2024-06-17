@@ -7,6 +7,11 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ColSetting: typeof import('./src/components/ColSetting.vue')['default']
+    CountDown: typeof import('./src/components/CountDown.vue')['default']
+    CustomDatePicker: typeof import('./src/components/CustomDatePicker.vue')['default']
+    CustomImport: typeof import('./src/components/CustomImport.vue')['default']
+    CustomTable: typeof import('./src/components/CustomTable.vue')['default']
     ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']
     ElBreadcrumbItem: typeof import('element-plus/es')['ElBreadcrumbItem']
     ElButtom: typeof import('element-plus/es')['ElButtom']
@@ -33,6 +38,8 @@ declare module 'vue' {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     LgtBreadcrumb: typeof import('./src/components/lgt-breadcrumb/index.vue')['default']
     LgtHamburger: typeof import('./src/components/lgt-hamburger/index.vue')['default']
+    MulElSelect: typeof import('./src/components/MulElSelect.vue')['default']
+    MulVxeSelect: typeof import('./src/components/MulVxeSelect.vue')['default']
     NxScrollPane: typeof import('./src/components/nx-scroll-pane/index.vue')['default']
     QuarterDatePicker: typeof import('./src/components/QuarterDatePicker.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
