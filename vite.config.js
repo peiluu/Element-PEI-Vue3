@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import qiankun from 'vite-plugin-qiankun'
 
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
@@ -73,6 +74,8 @@ export default defineConfig({
     },
   },
   plugins: [
+     // 添加如下代码，“subApp”与主应用中注册的名称一致
+     qiankun('vue3App', { useDevMode: true }),
     AutoImport({
       resolvers: [
         ElementPlusResolver({
@@ -101,7 +104,7 @@ export default defineConfig({
   ],
   server: {
     host: "localhost",
-    port: 8000,
+    port: 9000,
     mode: "development",
     strictPort: true,
     open: true,

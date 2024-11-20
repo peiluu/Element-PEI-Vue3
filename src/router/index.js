@@ -1,5 +1,6 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Layout from "@/layout/Index";
+import { qiankunWindow } from "vite-plugin-qiankun/dist/helper.js";
 
 /***
  * @description 页面路由配置
@@ -133,12 +134,12 @@ export const constantRouterMap = [
         component: () => import("@/views/vuexCharacteristic/vuex/Index.vue"),
         meta: { title: "vuex" },
       },
-      {
-        path: "vuecomponent",
-        component: () =>
-          import("@/views/vuexCharacteristic/vuecomponent/Index.vue"),
-        meta: { title: "vuecomponent" },
-      },
+      // {
+      //   path: "vuecomponent",
+      //   component: () =>
+      //     import("@/views/vuexCharacteristic/vuecomponent/Index.vue"),
+      //   meta: { title: "vuecomponent" },
+      // },
       {
         path: "axiosRequest",
         component: () =>
@@ -152,7 +153,8 @@ export const constantRouterMap = [
       },
       {
         path: "vueBasic",
-        component: () => import("@/views/vuexCharacteristic/vueBasic/Index.vue"),
+        component: () =>
+          import("@/views/vuexCharacteristic/vueBasic/Index.vue"),
         meta: { title: "vueBasic" },
       },
       {
@@ -211,11 +213,11 @@ export const constantRouterMap = [
     component: Layout,
     meta: { title: "Hooks实践" },
     children: [
-      {
-        path: "hooks",
-        component: () => import("@/views/hooks/Index.vue"),
-        meta: { title: "Hooks钩子" },
-      },
+      // {
+      //   path: "hooks",
+      //   component: () => import("@/views/hooks/Index.vue"),
+      //   meta: { title: "Hooks钩子" },
+      // },
       {
         path: "customeHooks",
         component: () => import("@/views/hooks/customeHooks"),
@@ -361,8 +363,10 @@ export const constantRouterMap = [
 ];
 
 export default createRouter({
-  history: createWebHashHistory(),
-  // mode: 'history', //后端支持可开
-  scrollBehavior: () => ({ y: 0 }),
-  routes: [...constantRouterMap],
+  // “subDemo” 与 主应用注册时的activeRule保持一致
+  history: createWebHistory(
+    qiankunWindow.__POWERED_BY_QIANKUN__ ? "/vue3App" : "/"
+  ),
+  // history模式
+  routes: constantRouterMap,
 });
