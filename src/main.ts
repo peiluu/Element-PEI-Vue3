@@ -18,8 +18,8 @@ import store from "@/store";
 import plugin from '@/plugin/index';
 
 // 引入自定义组件库
-import ElementPeiVue3 from 'element-pei-vue3';
-import 'element-pei-vue3/componentsdist/css/index.css';
+// import ElementPeiVue3 from 'element-pei-vue3';
+// import 'element-pei-vue3/componentsdist/css/index.css';
 //
 // 相对路径引入
 import '@/styles/elementPlus/element-costom.scss';
@@ -58,7 +58,8 @@ for (const iconName in ElIcons) {
   app.component(iconName, ElIcons[iconName]);
 }
 // app.component('QuarterDatePicker', QuarterDatePicker);
-app.use(router).use(store).use(plugin, { store }).use(ElementPlus).use(ElementPeiVue3).use(i18n).mount("#app");
+app.use(router).use(store).use(plugin, { store }).use(ElementPlus).use(i18n).mount("#app");
+// app.use(router).use(store).use(plugin, { store }).use(ElementPlus).use(ElementPeiVue3).use(i18n).mount("#app");
 // app.use(router).use(store).use(plugin, { store }).use(ElementPlus).mount("#app");
 import {
   renderWithQiankun,
