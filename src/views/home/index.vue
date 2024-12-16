@@ -30,4 +30,9 @@ const { locale } = useI18n();
 const changeLocale = (lang) => {
   locale.value = lang;
 };
+
+
+const a = () => {
+
+}
 </script>
