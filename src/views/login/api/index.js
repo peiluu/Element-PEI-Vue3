@@ -52,3 +52,4 @@ export function logout(token) {
     // },
   });
 }
+
