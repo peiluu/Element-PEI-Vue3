@@ -32,7 +32,5 @@ const changeLocale = (lang) => {
 };
 
 
-const a = () => {
 
-}
 </script>
